@@ -9,13 +9,13 @@
 
     <!-- Bootstrap -->
     <link href="{{cdncss "/twitter-bootstrap/3.3.7/css/bootstrap.min.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/twitter-bootstrap/3.3.7/plugins/tagsinput/bootstrap-tagsinput.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/twitter-bootstrap/3.3.7/plugins/bootstrap-switch/css/bootstrap3//bootstrap-switch.min.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/bootstrap/plugins/tagsinput/bootstrap-tagsinput.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/bootstrap/plugins/bootstrap-switch/css/bootstrap3//bootstrap-switch.min.css"}}" rel="stylesheet">
     <link href="{{cdncss "/font-awesome/4.7.0/css/font-awesome.min.css"}}" rel="stylesheet">
     <link href="{{cdncss "/webuploader/webuploader.css"}}" rel="stylesheet">
     <link href="{{cdncss "/cropper/2.3.4/cropper.min.css"}}" rel="stylesheet">
     <link href="{{cdncss "/select2/4.0.5/css/select2.min.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/css/main.css" "version"}}" rel="stylesheet">
+    <link href="{{static "/css/main.css" "version"}}" rel="stylesheet">
 </head>
 <body>
 <div class="manual-reader">
@@ -243,11 +243,11 @@
 <script src="{{cdnjs "/webuploader/webuploader.min.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/cropper/2.3.4/cropper.min.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/js/jquery.form.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/twitter-bootstrap/3.3.7/plugins/tagsinput/bootstrap-tagsinput.min.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/twitter-bootstrap/3.3.7/plugins/bootstrap-switch/js/bootstrap-switch.min.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/bootstrap/plugins/tagsinput/bootstrap-tagsinput.min.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/bootstrap/plugins/bootstrap-switch/js/bootstrap-switch.min.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/select2/4.0.5/js/select2.full.min.js"}}"></script>
 <script src="{{cdnjs "/select2/4.0.5/js/i18n/zh-CN.js"}}"></script>
-<script src="{{cdnjs "/js/main.js"}}" type="text/javascript"></script>
+<script src="{{static "/js/main.js"}}" type="text/javascript"></script>
 <script type="text/javascript">
     $(function () {
         $("#autoRelease,#enableShare,#isDownload,#is_use_first_document").bootstrapSwitch();
