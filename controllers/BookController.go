@@ -422,7 +422,9 @@ func (c *BookController) Users() {
 	c.Data["Model"] = *book
 
 	members, totalCount, err := models.NewMemberRelationshipResult().FindForUsersByBookId(book.BookId, pageIndex, conf.PageSize)
-
+	if err != nil {
+		c.Abort("500")
+	}
 	if totalCount > 0 {
 		pager := pagination.NewPagination(c.Ctx.Request, totalCount, conf.PageSize, c.BaseUrl())
 		c.Data["PageHtml"] = pager.HtmlPages()
@@ -491,8 +493,10 @@ func (c *BookController) Create() {
 
 				path := filepath.Dir(filePath)
 
-				os.MkdirAll(path, os.ModePerm)
-
+				error := os.MkdirAll(path, os.ModePerm)
+				if error != nil {
+					c.JsonResult(6007, "项目创建失败！")
+				}
 				if err := c.SaveToFile("image-file", filePath); err == nil {
 					url := "/" + strings.Replace(strings.TrimPrefix(filePath, conf.WorkingDirectory), "\\", "/", -1)
 
