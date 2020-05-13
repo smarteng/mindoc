@@ -94,7 +94,7 @@
     </div>
 </div><!--END Modal-->
 <script src="{{cdnjs "/jquery/1.12.4/jquery.min.js"}}"></script>
-<script src="{{cdnjs "/vuejs/vue.min.js"}}"></script>
+<script src="{{cdnjs "/vue/2.2.6/vue.min.js"}}"></script>
 <script src="{{cdnjs "/twitter-bootstrap/3.3.7/js/bootstrap.min.js"}}"></script>
 <script src="{{static "/js/jquery.form.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/layer/3.0.3/layer.js" }}" type="text/javascript"></script>
