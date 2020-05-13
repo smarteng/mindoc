@@ -12,18 +12,18 @@
     <title>{{.Model.BlogTitle}} - Powered by MinDoc</title>
 
     <!-- Bootstrap -->
-    <link href="{{cdncss "/static/bootstrap/css/bootstrap.min.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/twitter-bootstrap/3.3.7/css/bootstrap.min.css"}}" rel="stylesheet">
 
-    <link href="{{cdncss "/static/font-awesome/css/font-awesome.min.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/editor.md/lib/mermaid/mermaid.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/editor.md/lib/sequence/sequence-diagram-min.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/css/kancloud.css" "version"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/editor.md/css/editormd.preview.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/css/markdown.preview.css" "version"}}" rel="stylesheet">
-    <link href="{{cdncss (print "/static/editor.md/lib/highlight/styles/" .HighlightStyle ".css") "version"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/katex/katex.min.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/css/print.css"}}" media="print" rel="stylesheet">
-    <link href="{{cdncss "/static/css/main.css" "version"}}" rel="stylesheet">
+    <link href="{{cdncss "/font-awesome/4.7.0/css/font-awesome.min.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/editor.md/lib/mermaid/mermaid.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/editor.md/lib/sequence/sequence-diagram-min.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/css/kancloud.css" "version"}}" rel="stylesheet">
+    <link href="{{cdncss "/editor.md/css/editormd.preview.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/css/markdown.preview.css" "version"}}" rel="stylesheet">
+    <link href="{{cdncss (print "/editor.md/lib/highlight/styles/" .HighlightStyle ".css") "version"}}" rel="stylesheet">
+    <link href="{{cdncss "/katex/katex.min.css"}}" rel="stylesheet">
+    <link href="{{static "/css/print.css"}}" media="print" rel="stylesheet">
+    <link href="{{static "/css/main.css" "version"}}" rel="stylesheet">
     <style type="text/css">
         .header{
             min-height: 1rem;
@@ -127,8 +127,8 @@
 {{template "widgets/footer.tpl" .}}
     </div>
 </div>
-<script src="{{cdnjs "/static/jquery/1.12.4/jquery.min.js"}}"></script>
-<script src="{{cdnjs "/static/bootstrap/js/bootstrap.min.js"}}"></script>
+<script src="{{cdnjs "/jquery/1.12.4/jquery.min.js"}}"></script>
+<script src="{{cdnjs "/twitter-bootstrap/3.3.7/js/bootstrap.min.js"}}"></script>
 {{.Scripts}}
 </body>
 </html>

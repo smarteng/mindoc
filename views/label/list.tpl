@@ -11,10 +11,10 @@
     <meta name="author" content="Minho" />
     <meta name="site" content="https://www.iminho.me" />
     <!-- Bootstrap -->
-    <link href="{{cdncss "/static/bootstrap/css/bootstrap.min.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/font-awesome/css/font-awesome.min.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/twitter-bootstrap/3.3.7/css/bootstrap.min.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/font-awesome/4.7.0/css/font-awesome.min.css"}}" rel="stylesheet">
 
-    <link href="{{cdncss "/static/css/main.css" "version"}}" rel="stylesheet">
+    <link href="{{cdncss "/css/main.css" "version"}}" rel="stylesheet">
 </head>
 <body>
 <div class="manual-reader manual-container manual-search-reader">
@@ -44,8 +44,8 @@
     </div>
     {{template "widgets/footer.tpl" .}}
 </div>
-<script src="{{cdnjs "/static/jquery/1.12.4/jquery.min.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/bootstrap/js/bootstrap.min.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/jquery/1.12.4/jquery.min.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/twitter-bootstrap/3.3.7/js/bootstrap.min.js"}}" type="text/javascript"></script>
 {{.Scripts}}
 </body>
 </html>

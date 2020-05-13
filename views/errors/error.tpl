@@ -8,7 +8,7 @@
     <meta name="renderer" content="webkit" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> {{if eq 200 .ErrorCode}}友情提示{{else if eq 404 .ErrorCode}}页面不存在{{else}}服务器异0常{{end}} - Powered by MinDoc</title>
-    <link href="{{cdncss "/static/fonts/lato-100.css"}}" rel="stylesheet" type="text/css">
+    <link href="{{cdncss "/fonts/lato-100.css"}}" rel="stylesheet" type="text/css">
     <style type="text/css">
         html, body {
             height: 100%;

@@ -8,10 +8,10 @@
     <title>用户管理 - Powered by MinDoc</title>
 
     <!-- Bootstrap -->
-    <link href="{{cdncss "/static/bootstrap/css/bootstrap.min.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/font-awesome/css/font-awesome.min.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/twitter-bootstrap/3.3.7/css/bootstrap.min.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/font-awesome/4.7.0/css/font-awesome.min.css"}}" rel="stylesheet">
 
-    <link href="{{cdncss "/static/css/main.css" "version"}}" rel="stylesheet">
+    <link href="{{cdncss "/css/main.css" "version"}}" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -59,7 +59,7 @@
                                 <tbody>
                                 <tr v-for="item in lists">
                                     <td>${item.member_id}</td>
-                                    <td><img :src="item.avatar" onerror="this.src='{{cdnimg "/static/images/middle.gif"}}'" class="img-circle" width="34" height="34"></td>
+                                    <td><img :src="item.avatar" onerror="this.src='{{cdnimg "/images/middle.gif"}}'" class="img-circle" width="34" height="34"></td>
                                     <td>${item.account}</td>
                                     <td>${item.real_name}</td>
                                     <td>
@@ -193,11 +193,11 @@
         </form>
     </div>
 </div><!--END Modal-->
-<script src="{{cdnjs "/static/jquery/1.12.4/jquery.min.js"}}"></script>
-<script src="{{cdnjs "/static/bootstrap/js/bootstrap.min.js"}}"></script>
-<script src="{{cdnjs "/static/vuejs/vue.min.js"}}"></script>
-<script src="{{cdnjs "/static/js/jquery.form.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/js/main.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/jquery/1.12.4/jquery.min.js"}}"></script>
+<script src="{{cdnjs "/twitter-bootstrap/3.3.7/js/bootstrap.min.js"}}"></script>
+<script src="{{cdnjs "/vuejs/vue.min.js"}}"></script>
+<script src="{{cdnjs "/js/jquery.form.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/js/main.js"}}" type="text/javascript"></script>
 <script type="text/javascript">
     $(function () {
         $("#addMemberDialogModal").on("show.bs.modal",function () {

@@ -24,16 +24,16 @@
         window.vueApp = null;
     </script>
     <!-- Bootstrap -->
-    <link href="{{cdncss "/static/bootstrap/css/bootstrap.min.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/font-awesome/css/font-awesome.min.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/jstree/3.3.4/themes/default/style.min.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/wangEditor/css/wangEditor.min.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/twitter-bootstrap/3.3.7/css/bootstrap.min.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/font-awesome/4.7.0/css/font-awesome.min.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/jstree/3.3.4/themes/default/style.min.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/wangEditor/css/wangEditor.min.css"}}" rel="stylesheet">
 
-    <link href="{{cdncss (print "/static/editor.md/lib/highlight/styles/" .HighlightStyle ".css") "version"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/webuploader/webuploader.css"}}" rel="stylesheet">
+    <link href="{{cdncss (print "/editor.md/lib/highlight/styles/" .HighlightStyle ".css") "version"}}" rel="stylesheet">
+    <link href="{{cdncss "/webuploader/webuploader.css"}}" rel="stylesheet">
 
-    <link href="{{cdncss "/static/css/jstree.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/css/markdown.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/css/jstree.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/css/markdown.css"}}" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -183,21 +183,21 @@
     </div>
 </div>
 
-<script src="{{cdnjs "/static/jquery/1.12.4/jquery.min.js"}}"></script>
-<script src="{{cdnjs "/static/bootstrap/js/bootstrap.min.js"}}"></script>
-<script src="{{cdnjs "/static/vuejs/vue.min.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/jstree/3.3.4/jstree.min.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/webuploader/webuploader.min.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/wangEditor/js/wangEditor.min.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/wangEditor/plugins/save-menu.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/wangEditor/plugins/release-menu.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/wangEditor/plugins/attach-menu.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/wangEditor/plugins/history-menu.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/layer/layer.js"}}" type="text/javascript" ></script>
-<script src="{{cdnjs "/static/to-markdown/dist/to-markdown.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/js/jquery.form.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/js/editor.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/js/html-editor.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/jquery/1.12.4/jquery.min.js"}}"></script>
+<script src="{{cdnjs "/twitter-bootstrap/3.3.7/js/bootstrap.min.js"}}"></script>
+<script src="{{cdnjs "/vuejs/vue.min.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/jstree/3.3.4/jstree.min.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/webuploader/webuploader.min.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/wangEditor/js/wangEditor.min.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/wangEditor/plugins/save-menu.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/wangEditor/plugins/release-menu.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/wangEditor/plugins/attach-menu.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/wangEditor/plugins/history-menu.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/layer/layer.js"}}" type="text/javascript" ></script>
+<script src="{{cdnjs "/to-markdown/dist/to-markdown.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/js/jquery.form.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/js/editor.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/js/html-editor.js"}}" type="text/javascript"></script>
 <script type="text/javascript">
     $(function () {
         $("#attachInfo").on("click",function () {

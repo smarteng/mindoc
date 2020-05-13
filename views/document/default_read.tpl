@@ -14,26 +14,24 @@
     <meta name="description" content="{{.Title}}-{{if .Description}}{{.Description}}{{else}}{{.Model.Description}}{{end}}">
 
     <!-- Bootstrap -->
-    <link href="{{cdncss "/static/bootstrap/css/bootstrap.min.css"}}" rel="stylesheet">
-
-    <link href="{{cdncss "/static/jstree/3.3.4/themes/default/style.min.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/font-awesome/css/font-awesome.min.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/nprogress/nprogress.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/css/kancloud.css" "version"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/css/jstree.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/editor.md/lib/mermaid/mermaid.css" "version"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/editor.md/lib/sequence/sequence-diagram-min.css" "version"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/editor.md/css/editormd.preview.css" "version"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/css/markdown.preview.css" "version"}}" rel="stylesheet">
-    <link href="{{cdncss (print "/static/editor.md/lib/highlight/styles/" .HighlightStyle ".css") "version"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/katex/katex.min.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/css/print.css" "version"}}" media="print" rel="stylesheet">
-
+    <link href="{{cdncss "/twitter-bootstrap/3.3.7/css/bootstrap.min.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/jstree/3.3.4/themes/default/style.min.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/font-awesome/4.7.0/css/font-awesome.min.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/nprogress/nprogress.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/css/kancloud.css" "version"}}" rel="stylesheet">
+    <link href="{{cdncss "/css/jstree.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/editor.md/lib/mermaid/mermaid.css" "version"}}" rel="stylesheet">
+    <link href="{{cdncss "/editor.md/lib/sequence/sequence-diagram-min.css" "version"}}" rel="stylesheet">
+    <link href="{{cdncss "/editor.md/css/editormd.preview.css" "version"}}" rel="stylesheet">
+    <link href="{{cdncss "/css/markdown.preview.css" "version"}}" rel="stylesheet">
+    <link href="{{cdncss (print "/editor.md/lib/highlight/styles/" .HighlightStyle ".css") "version"}}" rel="stylesheet">
+    <link href="{{cdncss "/katex/katex.min.css"}}" rel="stylesheet">
+    <link href="{{static "/css/print.css" "version"}}" media="print" rel="stylesheet">
     <script type="text/javascript">window.book={"identify":"{{.Model.Identify}}"};</script>
 </head>
 <body>
 <div class="m-manual manual-mode-view manual-reader">
-    <header class="navbar navbar-static-top manual-head" role="banner">
+    <header class="navbar navbar-top manual-head" role="banner">
         <div class="container-fluid">
             <div class="navbar-header pull-left manual-title">
                 <span class="slidebar" id="slidebar"><i class="fa fa-align-justify"></i></span>
@@ -269,16 +267,16 @@
     </div>
 </div>
 
-<script src="{{cdnjs "/static/jquery/1.12.4/jquery.min.js"}}"></script>
-<script src="{{cdnjs "/static/bootstrap/js/bootstrap.min.js"}}"></script>
-<script src="{{cdnjs "/static/js/jquery.form.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/layer/layer.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/jstree/3.3.4/jstree.min.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/nprogress/nprogress.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/editor.md/lib/highlight/highlight.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/js/jquery.highlight.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/js/kancloud.js" "version"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/js/splitbar.js" "version"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/jquery/1.12.4/jquery.min.js"}}"></script>
+<script src="{{cdnjs "/twitter-bootstrap/3.3.7/js/bootstrap.min.js"}}"></script>
+<script src="{{cdnjs "/js/jquery.form.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/layer/layer.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/jstree/3.3.4/jstree.min.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/nprogress/nprogress.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/editor.md/lib/highlight/highlight.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/js/jquery.highlight.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/js/kancloud.js" "version"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/js/splitbar.js" "version"}}" type="text/javascript"></script>
 <script type="text/javascript">
 $(function () {
     $("#searchList").on("click","a",function () {

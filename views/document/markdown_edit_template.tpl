@@ -10,8 +10,8 @@
         window.treeCatalog = null;
         window.baseUrl = "{{.BaseUrl}}";
         window.saveing = false;
-        window.katex = { js: "{{cdnjs "/static/katex/katex"}}",css: "{{cdncss "/static/katex/katex"}}"};
-        window.editormdLib = "{{cdnjs "/static/editor.md/lib/"}}";
+        window.katex = { js: "{{cdnjs "/katex/katex"}}",css: "{{cdncss "/katex/katex"}}"};
+        window.editormdLib = "{{cdnjs "/editor.md/lib/"}}";
         window.editor = null;
         window.imageUploadURL = "{{urlfor "DocumentController.Upload" "identify" .Model.Identify}}";
         window.fileUploadURL = "{{urlfor "DocumentController.Upload" "identify" .Model.Identify}}";
@@ -28,15 +28,15 @@
         window.template = { "getUrl":"{{urlfor "TemplateController.Get"}}", "listUrl" : "{{urlfor "TemplateController.List"}}", "deleteUrl" : "{{urlfor "TemplateController.Delete"}}", "saveUrl" :"{{urlfor "TemplateController.Add"}}"}
     </script>
     <!-- Bootstrap -->
-    <link href="{{cdncss "/static/bootstrap/css/bootstrap.min.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/font-awesome/css/font-awesome.min.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/jstree/3.3.4/themes/default/style.min.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/editor.md/css/editormd.css" "version"}}" rel="stylesheet">
+    <link href="{{cdncss "/twitter-bootstrap/3.3.7/css/bootstrap.min.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/font-awesome/4.7.0/css/font-awesome.min.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/jstree/3.3.4/themes/default/style.min.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/editor.md/css/editormd.css" "version"}}" rel="stylesheet">
 
-    <link href="{{cdncss "/static/css/jstree.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/webuploader/webuploader.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/css/markdown.css" "version"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/css/markdown.preview.css" "version"}}" rel="stylesheet">
+    <link href="{{cdncss "/css/jstree.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/webuploader/webuploader.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/css/markdown.css" "version"}}" rel="stylesheet">
+    <link href="{{cdncss "/css/markdown.preview.css" "version"}}" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -427,18 +427,18 @@
 <template id="template-code">
 {{template "document/template_code.tpl"}}
 </template>
-<script src="{{cdnjs "/static/js/array.js" "version"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/jquery/1.12.4/jquery.min.js"}}"></script>
-<script src="{{cdnjs "/static/vuejs/vue.min.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/bootstrap/js/bootstrap.min.js"}}"></script>
-<script src="{{cdnjs "/static/webuploader/webuploader.min.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/jstree/3.3.4/jstree.min.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/editor.md/editormd.js" "version"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/layer/layer.js"}}" type="text/javascript" ></script>
-<script src="{{cdnjs "/static/js/jquery.form.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/js/array.js" "version"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/js/editor.js" "version"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/js/markdown.js" "version"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/js/array.js" "version"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/jquery/1.12.4/jquery.min.js"}}"></script>
+<script src="{{cdnjs "/vuejs/vue.min.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/twitter-bootstrap/3.3.7/js/bootstrap.min.js"}}"></script>
+<script src="{{cdnjs "/webuploader/webuploader.min.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/jstree/3.3.4/jstree.min.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/editor.md/editormd.js" "version"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/layer/layer.js"}}" type="text/javascript" ></script>
+<script src="{{cdnjs "/js/jquery.form.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/js/array.js" "version"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/js/editor.js" "version"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/js/markdown.js" "version"}}" type="text/javascript"></script>
 <script type="text/javascript">
     $(function () {
         $("#attachInfo").on("click",function () {

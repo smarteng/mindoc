@@ -8,14 +8,14 @@
     <title>设置 - {{.Model.BookName}} - Powered by MinDoc</title>
 
     <!-- Bootstrap -->
-    <link href="{{cdncss "/static/bootstrap/css/bootstrap.min.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/font-awesome/css/font-awesome.min.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/webuploader/webuploader.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/cropper/2.3.4/cropper.min.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/bootstrap/plugins/tagsinput/bootstrap-tagsinput.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/bootstrap/plugins/bootstrap-switch/css/bootstrap3//bootstrap-switch.min.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/select2/4.0.5/css/select2.min.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/css/main.css" "version"}}" rel="stylesheet">
+    <link href="{{cdncss "/twitter-bootstrap/3.3.7/css/bootstrap.min.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/font-awesome/4.7.0/css/font-awesome.min.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/webuploader/webuploader.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/cropper/2.3.4/cropper.min.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/twitter-bootstrap/3.3.7/plugins/tagsinput/bootstrap-tagsinput.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/twitter-bootstrap/3.3.7/plugins/bootstrap-switch/css/bootstrap3//bootstrap-switch.min.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/select2/4.0.5/css/select2.min.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/css/main.css" "version"}}" rel="stylesheet">
 
 </head>
 <body>
@@ -155,7 +155,7 @@
             <div class="form-right">
                 <label>
                     <a href="javascript:;" data-toggle="modal" data-target="#upload-logo-panel">
-                        <img src="{{cdnimg .Model.Cover}}" onerror="this.src='{{cdnimg "/static/images/book.png"}}'" alt="封面" style="max-width: 120px;border: 1px solid #999" id="headimgurl">
+                        <img src="{{cdnimg .Model.Cover}}" onerror="this.src='{{cdnimg "/images/book.png"}}'" alt="封面" style="max-width: 120px;border: 1px solid #999" id="headimgurl">
                     </a>
                 </label>
                 <p class="text">点击图片可修改项目封面</p>
@@ -295,16 +295,16 @@
     </div>
 </div>
 
-<script src="{{cdnjs "/static/jquery/1.12.4/jquery.min.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/bootstrap/js/bootstrap.min.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/webuploader/webuploader.min.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/cropper/2.3.4/cropper.min.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/js/jquery.form.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/bootstrap/plugins/tagsinput/bootstrap-tagsinput.min.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/bootstrap/plugins/bootstrap-switch/js/bootstrap-switch.min.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/static/select2/4.0.5/js/select2.full.min.js"}}"></script>
-<script src="{{cdnjs "/static/select2/4.0.5/js/i18n/zh-CN.js"}}"></script>
-<script src="{{cdnjs "/static/js/main.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/jquery/1.12.4/jquery.min.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/twitter-bootstrap/3.3.7/js/bootstrap.min.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/webuploader/webuploader.min.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/cropper/2.3.4/cropper.min.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/js/jquery.form.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/twitter-bootstrap/3.3.7/plugins/tagsinput/bootstrap-tagsinput.min.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/twitter-bootstrap/3.3.7/plugins/bootstrap-switch/js/bootstrap-switch.min.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/select2/4.0.5/js/select2.full.min.js"}}"></script>
+<script src="{{cdnjs "/select2/4.0.5/js/i18n/zh-CN.js"}}"></script>
+<script src="{{cdnjs "/js/main.js"}}" type="text/javascript"></script>
 <script type="text/javascript">
     $(function () {
         $("#upload-logo-panel").on("hidden.bs.modal",function () {

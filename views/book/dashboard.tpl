@@ -8,10 +8,10 @@
     <title>概要 - Powered by MinDoc</title>
 
     <!-- Bootstrap -->
-    <link href="{{cdncss "/static/bootstrap/css/bootstrap.min.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/static/font-awesome/css/font-awesome.min.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/twitter-bootstrap/3.3.7/css/bootstrap.min.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/font-awesome/4.7.0/css/font-awesome.min.css"}}" rel="stylesheet">
 
-    <link href="{{cdncss "/static/css/main.css" "version"}}" rel="stylesheet">
+    <link href="{{cdncss "/css/main.css" "version"}}" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -60,7 +60,7 @@
                     <div class="dashboard">
                         <div class="pull-left" style="width: 200px;margin-bottom: 15px;">
                             <div class="book-image">
-                                <img src="{{cdnimg .Model.Cover}}" onerror="this.src='{{cdnimg "/static/images/book.jpg"}}'" style="border: 1px solid #666;width: 175px;">
+                                <img src="{{cdnimg .Model.Cover}}" onerror="this.src='{{cdnimg "/images/book.jpg"}}'" style="border: 1px solid #666;width: 175px;">
                             </div>
                         </div>
 
@@ -102,10 +102,10 @@
     </div>
     {{template "widgets/footer.tpl" .}}
 </div>
-<script src="{{cdnjs "/static/jquery/1.12.4/jquery.min.js"}}"></script>
-<script src="{{cdnjs "/static/bootstrap/js/bootstrap.min.js"}}"></script>
-<script src="{{cdnjs "/static/layer/layer.js"}}"></script>
-<script src="{{cdnjs "/static/js/main.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/jquery/1.12.4/jquery.min.js"}}"></script>
+<script src="{{cdnjs "/twitter-bootstrap/3.3.7/js/bootstrap.min.js"}}"></script>
+<script src="{{cdnjs "/layer/layer.js"}}"></script>
+<script src="{{cdnjs "/js/main.js"}}" type="text/javascript"></script>
 <script type="text/javascript">
     $(function () {
         $("#btnRelease").on("click",function () {

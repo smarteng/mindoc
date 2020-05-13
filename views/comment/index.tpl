@@ -8,8 +8,8 @@
     <title>用户中心 - Powered by MinDoc</title>
 
     <!-- Bootstrap -->
-    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="/static/css/main.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -79,6 +79,6 @@
     </div>
 </div>
 <script src="/static/jquery/1.12.4/jquery.min.js"></script>
-<script src="/static/bootstrap/js/bootstrap.min.js"></script>
+<script src="/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
