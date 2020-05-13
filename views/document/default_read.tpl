@@ -18,8 +18,8 @@
     <link href="{{cdncss "/jstree/3.3.4/themes/default/style.min.css"}}" rel="stylesheet">
     <link href="{{cdncss "/font-awesome/4.7.0/css/font-awesome.min.css"}}" rel="stylesheet">
     <link href="{{cdncss "/nprogress/0.2.0/nprogress.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/css/kancloud.css" "version"}}" rel="stylesheet">
-    <link href="{{cdncss "/css/jstree.css"}}" rel="stylesheet">
+    <link href="{{static "/css/kancloud.css" "version"}}" rel="stylesheet">
+    <link href="{{static "/css/jstree.css"}}" rel="stylesheet">
     <link href="{{static "/editor.md/lib/mermaid/mermaid.css" "version"}}" rel="stylesheet">
     <link href="{{static "/editor.md/lib/sequence/sequence-diagram-min.css" "version"}}" rel="stylesheet">
     <link href="{{static "/editor.md/css/editormd.preview.css" "version"}}" rel="stylesheet">
@@ -269,11 +269,11 @@
 
 <script src="{{cdnjs "/jquery/1.12.4/jquery.min.js"}}"></script>
 <script src="{{cdnjs "/twitter-bootstrap/3.3.7/js/bootstrap.min.js"}}"></script>
-<script src="{{cdnjs "/js/jquery.form.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/layer/layer.js"}}" type="text/javascript"></script>
+<script src="{{static "/js/jquery.form.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/layer/3.0.3/layer.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/jstree/3.3.4/jstree.min.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/nprogress/nprogress.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/editor.md/lib/highlight/highlight.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/nprogress/0.2.0/nprogress.js"}}" type="text/javascript"></script>
+<script src="{{static "/editor.md/lib/highlight/highlight.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/js/jquery.highlight.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/js/kancloud.js" "version"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/js/splitbar.js" "version"}}" type="text/javascript"></script>

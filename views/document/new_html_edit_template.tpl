@@ -378,8 +378,8 @@
 <script src="{{cdnjs "/to-markdown/dist/to-markdown.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/quill/quill.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/quill/quill.icons.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/layer/layer.js"}}" type="text/javascript" ></script>
-<script src="{{cdnjs "/js/jquery.form.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/layer/3.0.3/layer.js"}}" type="text/javascript" ></script>
+<script src="{{static "/js/jquery.form.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/editor.md/lib/highlight/highlight.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/js/array.js" "version"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/js/editor.js"}}" type="text/javascript"></script>

@@ -299,7 +299,7 @@
 <script src="{{cdnjs "/twitter-bootstrap/3.3.7/js/bootstrap.min.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/webuploader/webuploader.min.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/cropper/2.3.4/cropper.min.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/js/jquery.form.js"}}" type="text/javascript"></script>
+<script src="{{static "/js/jquery.form.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/bootstrap/plugins/tagsinput/bootstrap-tagsinput.min.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/bootstrap/plugins/bootstrap-switch/js/bootstrap-switch.min.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/select2/4.0.5/js/select2.full.min.js"}}"></script>
