@@ -372,7 +372,7 @@
 <script src="{{cdnjs "/jquery/1.12.4/jquery.min.js"}}"></script>
 <script src="{{cdnjs "/vue/2.2.6/vue.min.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/twitter-bootstrap/3.3.7/js/bootstrap.min.js"}}"></script>
-<script src="{{cdnjs "/webuploader/webuploader.min.js"}}" type="text/javascript"></script>
+<script src="{{static "/webuploader/webuploader.min.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/jstree/3.3.4/jstree.min.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/katex/katex.min.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/to-markdown/dist/to-markdown.js"}}" type="text/javascript"></script>

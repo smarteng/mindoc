@@ -187,7 +187,7 @@
 <script src="{{cdnjs "/twitter-bootstrap/3.3.7/js/bootstrap.min.js"}}"></script>
 <script src="{{cdnjs "/vue/2.2.6/vue.min.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/jstree/3.3.4/jstree.min.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/webuploader/webuploader.min.js"}}" type="text/javascript"></script>
+<script src="{{static "/webuploader/webuploader.min.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/wangEditor/js/wangEditor.min.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/wangEditor/plugins/save-menu.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/wangEditor/plugins/release-menu.js"}}" type="text/javascript"></script>

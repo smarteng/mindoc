@@ -121,7 +121,7 @@
 <!--END Modal-->
 <script src="{{cdnjs "/jquery/1.12.4/jquery.min.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/twitter-bootstrap/3.3.7/js/bootstrap.min.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/webuploader/webuploader.min.js"}}" type="text/javascript"></script>
+<script src="{{static "/webuploader/webuploader.min.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/cropper/2.3.4/cropper.min.js"}}" type="text/javascript"></script>
 <script src="{{static "/js/jquery.form.js"}}" type="text/javascript"></script>
 <script src="{{static "/js/main.js"}}" type="text/javascript"></script>
