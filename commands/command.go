@@ -30,6 +30,13 @@ import (
 	"github.com/smarteng/mindoc/utils/filetil"
 )
 
+const (
+	CmdInstall string = "install"
+	CmdRemove  string = "remove"
+	CmdRestart string = "restart"
+	CmdVersion string = "version"
+)
+
 // RegisterDataBase 注册数据库
 func RegisterDataBase() {
 	beego.Info("正在初始化数据库配置.")
@@ -188,11 +195,10 @@ func RegisterLogger(log string) {
 
 // RunCommand 注册orm命令行工具
 func RegisterCommand() {
-
-	if len(os.Args) >= 2 && os.Args[1] == "install" {
+	if len(os.Args) >= 2 && os.Args[1] == CmdInstall {
 		ResolveCommand(os.Args[2:])
 		Install()
-	} else if len(os.Args) >= 2 && os.Args[1] == "version" {
+	} else if len(os.Args) >= 2 && os.Args[1] == CmdVersion {
 		CheckUpdate()
 		os.Exit(0)
 	}
@@ -334,9 +340,7 @@ func ResolveCommand(args []string) {
 	RegisterCache()
 	RegisterModel()
 	RegisterLogger(conf.LogFile)
-
 	ModifyPassword()
-
 }
 
 //注册缓存管道
@@ -354,9 +358,7 @@ func RegisterCache() {
 			cacheFilePath = filepath.Join(conf.WorkingDirectory, string(cacheFilePath[1:]))
 		}
 		fileCache := beegoCache.NewFileCache()
-
 		fileConfig := make(map[string]string)
-
 		fileConfig["CachePath"] = cacheFilePath
 		fileConfig["DirectoryLevel"] = beego.AppConfig.DefaultString("cache_file_dir_level", "2")
 		fileConfig["EmbedExpiry"] = beego.AppConfig.DefaultString("cache_file_expiry", "120")
@@ -367,11 +369,8 @@ func RegisterCache() {
 			beego.Error("初始化file缓存失败:", err)
 			os.Exit(1)
 		}
-
 		_ = fileCache.StartAndGC(string(bc))
-
 		cache.Init(fileCache)
-
 	} else if cacheProvider == "memory" {
 		cacheInterval := beego.AppConfig.DefaultInt("cache_memory_interval", 60)
 		memory := beegoCache.NewMemoryCache()
@@ -402,15 +401,12 @@ func RegisterCache() {
 			os.Exit(1)
 		}
 		redisCache, err := beegoCache.NewCache("redis", string(bc))
-
 		if err != nil {
 			beego.Error("初始化Redis缓存失败:", err)
 			os.Exit(1)
 		}
-
 		cache.Init(redisCache)
 	} else if cacheProvider == "memcache" {
-
 		var memcacheConfig struct {
 			Conn string `json:"conn"`
 		}

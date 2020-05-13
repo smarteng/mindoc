@@ -19,7 +19,6 @@ type Daemon struct {
 }
 
 func NewDaemon() *Daemon {
-
 	config := &service.Config{
 		Name:             "mindocd",                               //服务显示名称
 		DisplayName:      "MinDoc service",                        //服务名称
@@ -38,31 +37,23 @@ func (d *Daemon) Config() *service.Config {
 	return d.config
 }
 func (d *Daemon) Start(s service.Service) error {
-
 	go d.Run()
 	return nil
 }
 
 func (d *Daemon) Run() {
-
 	commands.ResolveCommand(d.config.Arguments)
-
 	commands.RegisterFunction()
-
 	commands.RegisterAutoLoadConfig()
-
 	commands.RegisterError()
-
 	beego.ErrorController(&controllers.ErrorController{})
 
 	f, err := filepath.Abs(os.Args[0])
-
 	if err != nil {
 		f = os.Args[0]
 	}
 
 	fmt.Printf("MinDoc version => %s\nbuild time => %s\nstart directory => %s\n%s\n", conf.VERSION, conf.BUILD_TIME, f, conf.GO_VERSION)
-
 	beego.Run()
 }
 
@@ -76,7 +67,6 @@ func (d *Daemon) Stop(s service.Service) error {
 func Install() {
 	d := NewDaemon()
 	d.config.Arguments = os.Args[3:]
-
 	s, err := service.New(d, d.config)
 
 	if err != nil {

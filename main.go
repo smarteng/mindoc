@@ -15,13 +15,16 @@ import (
 	_ "github.com/smarteng/mindoc/routers"
 )
 
+
 func main() {
+	fmt.Println(os.Args)
 	if len(os.Args) >= 3 && os.Args[1] == "service" {
-		if os.Args[2] == "install" {
+		switch os.Args[2] {
+		case commands.CmdInstall:
 			daemon.Install()
-		} else if os.Args[2] == "remove" {
+		case commands.CmdRemove:
 			daemon.Uninstall()
-		} else if os.Args[2] == "restart" {
+		case commands.CmdRestart:
 			daemon.Restart()
 		}
 	}

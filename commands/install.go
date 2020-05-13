@@ -92,14 +92,12 @@ func initialization() {
 	}
 	member, err := models.NewMember().FindByFieldFirst("account", "admin")
 	if err == orm.ErrNoRows {
-
 		member.Account = "admin"
 		member.Avatar = conf.URLForWithCdnImage("/images/headimgurl.jpg")
 		member.Password = "123456"
 		member.AuthMethod = "local"
 		member.Role = 0
 		member.Email = "admin@iminho.me"
-
 		if err := member.Add(); err != nil {
 			panic("Member.Add => " + err.Error())
 		}
