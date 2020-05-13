@@ -9,21 +9,22 @@ import (
 	"strings"
 	"time"
 
+	"encoding/json"
+	"net/http"
+	"regexp"
+
 	"github.com/PuerkitoBio/goquery"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
 	"github.com/astaxie/beego/orm"
 	"github.com/lifei6671/mindoc/conf"
 	"github.com/lifei6671/mindoc/converter"
-	"github.com/lifei6671/mindoc/utils/filetil"
-	"github.com/lifei6671/mindoc/utils/ziptil"
-	"gopkg.in/russross/blackfriday.v2"
-	"regexp"
 	"github.com/lifei6671/mindoc/utils/cryptil"
-	"github.com/lifei6671/mindoc/utils/requests"
+	"github.com/lifei6671/mindoc/utils/filetil"
 	"github.com/lifei6671/mindoc/utils/gopool"
-	"net/http"
-	"encoding/json"
+	"github.com/lifei6671/mindoc/utils/requests"
+	"github.com/lifei6671/mindoc/utils/ziptil"
+	"github.com/russross/blackfriday/v2"
 )
 
 var (

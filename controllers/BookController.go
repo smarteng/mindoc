@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/lifei6671/mindoc/utils/sqltil"
 	"html/template"
 	"os"
 	"path/filepath"
@@ -13,6 +12,8 @@ import (
 	"strings"
 	"time"
 
+	"github.com/smarteng/mindoc/utils/sqltil"
+
 	"net/http"
 
 	"github.com/astaxie/beego"
@@ -20,10 +21,10 @@ import (
 	"github.com/astaxie/beego/orm"
 	"github.com/lifei6671/mindoc/conf"
 	"github.com/lifei6671/mindoc/graphics"
-	"github.com/lifei6671/mindoc/models"
+	"github.com/smarteng/mindoc/models"
 	"github.com/lifei6671/mindoc/utils"
 	"github.com/lifei6671/mindoc/utils/pagination"
-	"gopkg.in/russross/blackfriday.v2"
+	"github.com/russross/blackfriday/v2"
 )
 
 type BookController struct {
@@ -771,7 +772,7 @@ func (c *BookController) SaveSort() {
 	if c.Member.IsAdministrator() {
 		book, err := models.NewBook().FindByFieldFirst("identify", identify)
 		if err != nil || book == nil {
-			c.JsonResult(6001,"项目不存在")
+			c.JsonResult(6001, "项目不存在")
 			return
 		}
 		bookId = book.BookId

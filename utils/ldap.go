@@ -3,8 +3,9 @@ package utils
 import (
 	"errors"
 	"fmt"
+
 	"github.com/astaxie/beego"
-	"gopkg.in/ldap.v2"
+	"github.com/go-ldap/ldap/v3"
 )
 
 /*

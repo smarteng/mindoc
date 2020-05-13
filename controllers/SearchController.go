@@ -1,14 +1,15 @@
 package controllers
 
 import (
-	"github.com/astaxie/beego"
-	"github.com/lifei6671/mindoc/conf"
-	"github.com/lifei6671/mindoc/models"
-	"github.com/lifei6671/mindoc/utils"
-	"github.com/lifei6671/mindoc/utils/pagination"
-	"github.com/lifei6671/mindoc/utils/sqltil"
 	"strconv"
 	"strings"
+
+	"github.com/astaxie/beego"
+	"github.com/lifei6671/mindoc/conf"
+	"github.com/smarteng/mindoc/models"
+	"github.com/lifei6671/mindoc/utils"
+	"github.com/lifei6671/mindoc/utils/pagination"
+	"github.com/smarteng/mindoc/utils/sqltil"
 )
 
 type SearchController struct {
@@ -40,20 +41,20 @@ func (c *SearchController) Index() {
 		searchResult, totalCount, err := models.NewDocumentSearchResult().FindToPager(sqltil.EscapeLike(keyword), pageIndex, conf.PageSize, memberId)
 
 		if err != nil {
-			beego.Error("搜索失败 ->",err)
+			beego.Error("搜索失败 ->", err)
 			return
 		}
 		if totalCount > 0 {
-			pager := pagination.NewPagination(c.Ctx.Request, totalCount, conf.PageSize,c.BaseUrl())
+			pager := pagination.NewPagination(c.Ctx.Request, totalCount, conf.PageSize, c.BaseUrl())
 			c.Data["PageHtml"] = pager.HtmlPages()
 		} else {
 			c.Data["PageHtml"] = ""
 		}
 		if len(searchResult) > 0 {
-			keywords := strings.Split(keyword," ")
+			keywords := strings.Split(keyword, " ")
 
 			for _, item := range searchResult {
-				for _,word := range keywords {
+				for _, word := range keywords {
 					item.DocumentName = strings.Replace(item.DocumentName, word, "<em>"+word+"</em>", -1)
 					if item.Description != "" {
 						src := item.Description

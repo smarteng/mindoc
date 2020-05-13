@@ -2,7 +2,7 @@ package controllers
 
 import (
 	"strings"
-	"github.com/lifei6671/mindoc/models"
+	"github.com/smarteng/mindoc/models"
 	"time"
 	"github.com/astaxie/beego"
 	"github.com/lifei6671/mindoc/conf"
