@@ -274,9 +274,9 @@
 <script src="{{cdnjs "/jstree/3.3.4/jstree.min.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/nprogress/0.2.0/nprogress.js"}}" type="text/javascript"></script>
 <script src="{{static "/editor.md/lib/highlight/highlight.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/js/jquery.highlight.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/js/kancloud.js" "version"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/js/splitbar.js" "version"}}" type="text/javascript"></script>
+<script src="{{static "/js/jquery.highlight.js"}}" type="text/javascript"></script>
+<script src="{{static "/js/kancloud.js" "version"}}" type="text/javascript"></script>
+<script src="{{static "/js/splitbar.js" "version"}}" type="text/javascript"></script>
 <script type="text/javascript">
 $(function () {
     $("#searchList").on("click","a",function () {

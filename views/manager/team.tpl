@@ -142,7 +142,7 @@
 <script src="{{cdnjs "/twitter-bootstrap/3.3.7/js/bootstrap.min.js"}}"></script>
 <script src="{{cdnjs "/vuejs/vue.min.js"}}"></script>
 <script src="{{static "/js/jquery.form.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/js/main.js"}}" type="text/javascript"></script>
+<script src="{{static "/js/main.js"}}" type="text/javascript"></script>
 <script type="text/javascript">
     $(function () {
         var editTeamDialogModal = $("#editTeamDialogModal");

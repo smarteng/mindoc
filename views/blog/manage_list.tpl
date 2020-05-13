@@ -112,7 +112,7 @@
 <script src="{{cdnjs "/bootstrap/plugins/bootstrap-fileinput/4.4.7/js/fileinput.min.js"}}"></script>
 <script src="{{cdnjs "/bootstrap/plugins/bootstrap-fileinput/4.4.7/js/locales/zh.js"}}"></script>
 <script src="{{cdnjs "/layer/3.0.3/layer.js"}}" type="text/javascript" ></script>
-<script src="{{cdnjs "/js/main.js"}}" type="text/javascript"></script>
+<script src="{{static "/js/main.js"}}" type="text/javascript"></script>
 <script type="text/javascript">
 
     /**
