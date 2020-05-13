@@ -242,7 +242,12 @@ func RegisterFunction() {
 		beego.Error("注册函数 cdnjs 出错 ->", err)
 		os.Exit(-1)
 	}
-	err = beego.AddFuncMap("cdncss", conf.URLForWithCdnCss)
+	err = beego.AddFuncMap("static", conf.URLForWithStatic)
+	if err != nil {
+		beego.Error("注册函数 static 出错 ->", err)
+		os.Exit(-1)
+	}
+	err = beego.AddFuncMap("cdncss", conf.URLForWithCdnCSS)
 	if err != nil {
 		beego.Error("注册函数 cdncss 出错 ->", err)
 		os.Exit(-1)

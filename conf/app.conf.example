@@ -69,7 +69,7 @@ db_password="${MINDOC_DB_PASSWORD||123456}"
 cover=/static/images/book.jpg
 
 #默认头像
-avatar=/static/images/headimgurl.jpg
+avatar=/images/headimgurl.jpg
 
 #默认阅读令牌长度
 token_size=12
@@ -144,10 +144,16 @@ http_login_secret=hzsp*THJUqwbCU%s
 ##################################
 
 ###############配置CDN加速##################
-cdn="${MINDOC_CDN_URL}"
-cdnjs="${MINDOC_CDN_JS_URL}"
-cdncss="${MINDOC_CDN_CSS_URL}"
-cdnimg="${MINDOC_CDN_IMG_URL}"
+#cdn="${MINDOC_CDN_URL||//lib.baomitu.com}"
+cdn="${MINDOC_CDN_URL||/static}"
+#cdnjs="${MINDOC_CDN_JS_URL||//lib.baomitu.com}"
+cdnjs="${MINDOC_CDN_JS_URL||/static}"
+#cdncss="${MINDOC_CDN_CSS_URL||//lib.baomitu.com}"
+cdncss="${MINDOC_CDN_CSS_URL||/static}"
+#cdnimg="${MINDOC_CDN_IMG_URL||//xxx.com}
+cdnimg="${MINDOC_CDN_IMG_URL||/static}"
+# 静态文件：站点的css js,不用cdn的存放站点上的
+static="${MINDOC_CDN_IMG_URL||/static}"
 
 ######################缓存配置###############################
 

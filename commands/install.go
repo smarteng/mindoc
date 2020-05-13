@@ -94,7 +94,7 @@ func initialization() {
 	if err == orm.ErrNoRows {
 
 		member.Account = "admin"
-		member.Avatar = conf.URLForWithCdnImage("/static/images/headimgurl.jpg")
+		member.Avatar = conf.URLForWithCdnImage("/images/headimgurl.jpg")
 		member.Password = "123456"
 		member.AuthMethod = "local"
 		member.Role = 0
