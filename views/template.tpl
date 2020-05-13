@@ -8,15 +8,15 @@
     <title>用户中心 - Powered by MinDoc</title>
 
     <!-- Bootstrap -->
-    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{cdncss "/twitter-bootstrap/3.3.7/css/bootstrap.min.css"}}" rel="stylesheet">
+    <link href="{{cdncss "/font-awesome/4.7.0/css/font-awesome.min.css"}}" rel="stylesheet">
 
-    <link href="/static/css/main.css" rel="stylesheet">
+    <link href="{{static "/css/main.css"}}" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="/static/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="/static/respond.js/1.4.2/respond.min.js"></script>
+    <script src="{{static "/html5shiv/3.7.3/html5shiv.min.js"}}"></script>
+    <script src="{{static "/respond.js/1.4.2/respond.min.js"}}"></script>
     <![endif]-->
 </head>
 <body>
@@ -78,7 +78,7 @@
         </div>
     </div>
 </div>
-<script src="{{cdnjs "/static/jquery/1.12.4/jquery.min.js"}}"></script>
-<script src="{{cdnjs "/static/bootstrap/js/bootstrap.min.js"}}"></script>
+<script src="{{cdnjs "/jquery/1.12.4/jquery.min.js"}}"></script>
+<script src="{{cdnjs "/twitter-bootstrap/3.3.7/js/bootstrap.min.js"}}"></script>
 </body>
 </html>
