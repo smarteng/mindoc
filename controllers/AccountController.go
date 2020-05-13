@@ -278,7 +278,7 @@ func (c *AccountController) FindPassword() {
 			c.JsonResult(6003, "邮件发送失败")
 		}
 
-		go func(mailConf *conf.SmtpConf, email string, body string) {
+		go func(mailConf *conf.SMTPConf, email string, body string) {
 
 			mailConfig := &mail.SMTPConfig{
 				Username: mailConf.SmtpUserName,

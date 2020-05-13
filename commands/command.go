@@ -360,7 +360,7 @@ func RegisterCache() {
 		}
 		fileCache := beegoCache.NewFileCache()
 
-		fileConfig := make(map[string]string, 0)
+		fileConfig := make(map[string]string)
 
 		fileConfig["CachePath"] = cacheFilePath
 		fileConfig["DirectoryLevel"] = beego.AppConfig.DefaultString("cache_file_dir_level", "2")

@@ -452,10 +452,6 @@ func (c *BlogController) Upload() {
 
 	defer file.Close()
 
-	type Size interface {
-		Size() int64
-	}
-
 	if conf.GetUploadFileSize() > 0 && moreFile.Size > conf.GetUploadFileSize() {
 		c.JsonResult(6009, "查过文件允许的上传最大值")
 	}

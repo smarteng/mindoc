@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-type SmtpConf struct {
+type SMTPConf struct {
 	EnableMail   bool
 	MailNumber   int
 	SmtpUserName string
@@ -17,7 +17,7 @@ type SmtpConf struct {
 	Secure	string
 }
 
-func GetMailConfig() *SmtpConf {
+func GetMailConfig() *SMTPConf {
 	user_name := beego.AppConfig.String("smtp_user_name")
 	password := beego.AppConfig.String("smtp_password")
 	smtp_host := beego.AppConfig.String("smtp_host")
@@ -30,7 +30,7 @@ func GetMailConfig() *SmtpConf {
 	if secure != "NONE" && secure != "LOGIN" && secure != "SSL" {
 		secure = "NONE"
 	}
-	c := &SmtpConf{
+	c := &SMTPConf{
 		EnableMail:   strings.EqualFold(enable_mail, "true"),
 		MailNumber:   mail_number,
 		SmtpUserName: user_name,
