@@ -435,7 +435,7 @@
 <script src="{{cdnjs "/jstree/3.3.4/jstree.min.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/editor.md/editormd.js" "version"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/layer/3.0.3/layer.js"}}" type="text/javascript" ></script>
-<script src="{{cdnjs "/js/jquery.form.js"}}" type="text/javascript"></script>
+<script src="{{static "/js/jquery.form.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/js/array.js" "version"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/js/editor.js" "version"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/js/markdown.js" "version"}}" type="text/javascript"></script>
