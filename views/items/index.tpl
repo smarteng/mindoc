@@ -14,7 +14,7 @@
     <link href="{{cdncss "/twitter-bootstrap/3.3.7/css/bootstrap.min.css"}}" rel="stylesheet">
     <link href="{{cdncss "/font-awesome/4.7.0/css/font-awesome.min.css"}}" rel="stylesheet">
 
-    <link href="{{cdncss "/css/main.css" "version"}}" rel="stylesheet">
+    <link href="{{static "/css/main.css" "version"}}" rel="stylesheet">
 
 </head>
 <body>

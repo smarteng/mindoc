@@ -12,7 +12,7 @@
     <link href="{{cdncss "/font-awesome/4.7.0/css/font-awesome.min.css"}}" rel="stylesheet">
     <link href="{{cdncss "/webuploader/webuploader.css"}}" rel="stylesheet">
     <link href="{{cdncss "/cropper/2.3.4/cropper.min.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/css/main.css" "version"}}" rel="stylesheet">
+    <link href="{{static "/css/main.css" "version"}}" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

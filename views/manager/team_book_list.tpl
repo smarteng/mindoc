@@ -12,7 +12,7 @@
     <link href="{{cdncss "/font-awesome/4.7.0/css/font-awesome.min.css"}}" rel="stylesheet" type="text/css">
     <link href="{{cdncss "/select2/4.0.5/css/select2.min.css"}}" rel="stylesheet">
 
-    <link href="{{cdncss "/css/main.css" "version"}}" rel="stylesheet">
+    <link href="{{static "/css/main.css" "version"}}" rel="stylesheet">
 </head>
 <body>
 <div class="manual-reader">
