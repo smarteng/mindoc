@@ -29,6 +29,13 @@ import (
 	"github.com/smarteng/mindoc/utils/pagination"
 )
 
+const (
+	Pdf  string = "pdf"
+	Docx string = "docx"
+	Epub string = "epub"
+	Mobi string = "mobi"
+)
+
 // DocumentController struct
 type DocumentController struct {
 	BaseController
@@ -52,7 +59,6 @@ func (c *DocumentController) Index() {
 	}
 
 	bookResult := c.isReadable(identify, token)
-
 	c.TplName = "document/" + bookResult.Theme + "_read.tpl"
 
 	selected := 0
@@ -247,7 +253,7 @@ func (c *DocumentController) Edit() {
 	if conf.GetUploadFileSize() > 0 {
 		c.Data["UploadFileSize"] = conf.GetUploadFileSize()
 	} else {
-		c.Data["UploadFileSize"] = "undefined";
+		c.Data["UploadFileSize"] = "undefined"
 	}
 }
 
@@ -343,9 +349,7 @@ func (c *DocumentController) Upload() {
 	if identify == "" {
 		c.JsonResult(6001, "参数错误")
 	}
-
 	name := "editormd-file-file"
-
 	file, moreFile, err := c.GetFile(name)
 	if err == http.ErrMissingFile || moreFile == nil {
 		name = "editormd-image-file"
@@ -365,7 +369,6 @@ func (c *DocumentController) Upload() {
 	if conf.GetUploadFileSize() > 0 && moreFile.Size > conf.GetUploadFileSize() {
 		c.JsonResult(6009, "文件大小超过了限定的最大值")
 	}
-
 	ext := filepath.Ext(moreFile.Filename)
 	//文件必须带有后缀名
 	if ext == "" {
@@ -377,7 +380,6 @@ func (c *DocumentController) Upload() {
 	}
 
 	bookId := 0
-
 	// 如果是超级管理员，则不判断权限
 	if c.Member.IsAdministrator() {
 		book, err := models.NewBook().FindByFieldFirst("identify", identify)
@@ -385,7 +387,6 @@ func (c *DocumentController) Upload() {
 		if err != nil {
 			c.JsonResult(6006, "文档不存在或权限不足")
 		}
-
 		bookId = book.BookId
 	} else {
 		book, err := models.NewBookResult().FindByIdentify(identify, c.Member.MemberId)
@@ -395,15 +396,12 @@ func (c *DocumentController) Upload() {
 			if err == orm.ErrNoRows {
 				c.JsonResult(6006, "权限不足")
 			}
-
 			c.JsonResult(6001, err.Error())
 		}
-
 		// 如果没有编辑权限
 		if book.RoleId != conf.BookEditor && book.RoleId != conf.BookAdmin && book.RoleId != conf.BookFounder {
 			c.JsonResult(6006, "权限不足")
 		}
-
 		bookId = book.BookId
 	}
 
@@ -853,23 +851,23 @@ func (c *DocumentController) Export() {
 	mobipath := filepath.Join(outputPath, "book.mobi")
 	docxpath := filepath.Join(outputPath, "book.docx")
 
-	if output == "pdf" && filetil.FileExists(pdfpath) {
+	if output == Pdf && filetil.FileExists(pdfpath) {
 		c.Ctx.Output.Download(pdfpath, bookResult.BookName+".pdf")
 		c.Abort("200")
-	} else if output == "epub" && filetil.FileExists(epubpath) {
+	} else if output == Epub && filetil.FileExists(epubpath) {
 		c.Ctx.Output.Download(epubpath, bookResult.BookName+".epub")
 
 		c.Abort("200")
-	} else if output == "mobi" && filetil.FileExists(mobipath) {
+	} else if output == Mobi && filetil.FileExists(mobipath) {
 		c.Ctx.Output.Download(mobipath, bookResult.BookName+".mobi")
 
 		c.Abort("200")
-	} else if output == "docx" && filetil.FileExists(docxpath) {
+	} else if output == Docx && filetil.FileExists(docxpath) {
 		c.Ctx.Output.Download(docxpath, bookResult.BookName+".docx")
 
 		c.Abort("200")
 
-	} else if output == "pdf" || output == "epub" || output == "docx" || output == "mobi" {
+	} else if output == Pdf || output == Epub || output == Docx || output == Mobi {
 		if err := models.BackgroundConvert(c.CruSession.SessionID(), bookResult); err != nil && err != gopool.ErrHandlerIsExist {
 			c.ShowErrorPage(500, "导出失败，请查看系统日志")
 		}
@@ -1254,7 +1252,7 @@ func (c *DocumentController) isReadable(identify, token string) *models.BookResu
 				if book.BookPassword != "" {
 					//判断已存在的密码是否正确
 					if password, ok := c.GetSession(identify).(string); !ok || !strings.EqualFold(password, book.BookPassword) {
-						body, err := c.ExecuteViewPathTemplate("document/document_password.tpl", map[string]string{"Identify": book.Identify});
+						body, err := c.ExecuteViewPathTemplate("document/document_password.tpl", map[string]string{"Identify": book.Identify})
 						if err != nil {
 							beego.Error("显示密码页面失败 ->", err)
 						}

@@ -35,7 +35,6 @@ func RegisterDataBase() {
 	beego.Info("正在初始化数据库配置.")
 	adapter := beego.AppConfig.String("db_adapter")
 	orm.DefaultTimeLoc = time.Local
-
 	if strings.EqualFold(adapter, "mysql") {
 		host := beego.AppConfig.String("db_host")
 		database := beego.AppConfig.String("db_database")
@@ -140,7 +139,6 @@ func RegisterLogger(log string) {
 	}
 
 	config := make(map[string]interface{}, 1)
-
 	config["filename"] = logPath
 	config["perm"] = "0755"
 	config["rotate"] = true
@@ -216,15 +214,15 @@ func RegisterFunction() {
 		}
 		//如果没有设置cdn，则使用baseURL拼接
 		if cdn == "" {
-			baseUrl := beego.AppConfig.DefaultString("baseurl", "")
+			baseURL := beego.AppConfig.DefaultString("baseurl", "")
 
-			if strings.HasPrefix(p, "/") && strings.HasSuffix(baseUrl, "/") {
-				return baseUrl + p[1:]
+			if strings.HasPrefix(p, "/") && strings.HasSuffix(baseURL, "/") {
+				return baseURL + p[1:]
 			}
-			if !strings.HasPrefix(p, "/") && !strings.HasSuffix(baseUrl, "/") {
-				return baseUrl + "/" + p
+			if !strings.HasPrefix(p, "/") && !strings.HasSuffix(baseURL, "/") {
+				return baseURL + "/" + p
 			}
-			return baseUrl + p
+			return baseURL + p
 		}
 		if strings.HasPrefix(p, "/") && strings.HasSuffix(cdn, "/") {
 			return cdn + string(p[1:])

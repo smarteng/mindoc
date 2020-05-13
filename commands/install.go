@@ -16,9 +16,7 @@ import (
 
 //系统安装.
 func Install() {
-
 	fmt.Println("Initializing...")
-
 	err := orm.RunSyncdb("default", false, true)
 	if err == nil {
 		initialization()
@@ -27,7 +25,6 @@ func Install() {
 	}
 	fmt.Println("Install Successfully!")
 	os.Exit(0)
-
 }
 
 func Version() {
@@ -40,7 +37,6 @@ func Version() {
 //修改用户密码
 func ModifyPassword() {
 	var account, password string
-
 	//账号和密码需要解析参数后才能获取
 	if len(os.Args) >= 2 && os.Args[1] == "password" {
 		flagSet := flag.NewFlagSet("MinDoc command: ", flag.ExitOnError)
@@ -52,12 +48,10 @@ func ModifyPassword() {
 			beego.Error("解析参数失败 -> ", err)
 			os.Exit(1)
 		}
-
 		if len(os.Args) < 2 {
 			fmt.Println("Parameter error.")
 			os.Exit(1)
 		}
-
 		if account == "" {
 			fmt.Println("Account cannot be empty.")
 			os.Exit(1)
@@ -73,13 +67,11 @@ func ModifyPassword() {
 			os.Exit(1)
 		}
 		pwd, err := utils.PasswordHash(password)
-
 		if err != nil {
 			fmt.Println("Failed to change password:", err)
 			os.Exit(1)
 		}
 		member.Password = pwd
-
 		err = member.Update("password")
 		if err != nil {
 			fmt.Println("Failed to change password:", err)
@@ -88,7 +80,6 @@ func ModifyPassword() {
 		fmt.Println("Successfully modified.")
 		os.Exit(0)
 	}
-
 }
 
 //初始化数据
@@ -99,7 +90,6 @@ func initialization() {
 	if err != nil {
 		panic(err.Error())
 	}
-
 	member, err := models.NewMember().FindByFieldFirst("account", "admin")
 	if err == orm.ErrNoRows {
 
@@ -115,7 +105,6 @@ func initialization() {
 		}
 
 		book := models.NewBook()
-
 		book.MemberId = member.MemberId
 		book.BookName = "MinDoc演示项目"
 		book.Status = 0

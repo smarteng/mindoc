@@ -17,8 +17,8 @@ type BookMemberController struct {
 // AddMember 参加参与用户.
 func (c *BookMemberController) AddMember() {
 	identify := c.GetString("identify")
-	account,_ := c.GetInt("account")
-	roleId, _ := c.GetInt("role_id", 3)
+	account, _ := c.GetInt("account")
+	roleID, _ := c.GetInt("role_id", 3)
 	beego.Info(account)
 	if identify == "" || account <= 0 {
 		c.JsonResult(6001, "参数错误")
@@ -28,7 +28,6 @@ func (c *BookMemberController) AddMember() {
 	if err != nil {
 		c.JsonResult(6001, err.Error())
 	}
-
 
 	member := models.NewMember()
 
@@ -46,11 +45,11 @@ func (c *BookMemberController) AddMember() {
 	relationship := models.NewRelationship()
 	relationship.BookId = book.BookId
 	relationship.MemberId = member.MemberId
-	relationship.RoleId = conf.BookRole(roleId)
+	relationship.RoleId = conf.BookRole(roleID)
 
 	if err := relationship.Insert(); err == nil {
 		memberRelationshipResult := models.NewMemberRelationshipResult().FromMember(member)
-		memberRelationshipResult.RoleId = conf.BookRole(roleId)
+		memberRelationshipResult.RoleId = conf.BookRole(roleID)
 		memberRelationshipResult.RelationshipId = relationship.RelationshipId
 		memberRelationshipResult.BookId = book.BookId
 		memberRelationshipResult.ResolveRoleName()

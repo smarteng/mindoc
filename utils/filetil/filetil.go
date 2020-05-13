@@ -1,14 +1,14 @@
 package filetil
 
 import (
+	"bytes"
+	"fmt"
+	"io"
+	"io/ioutil"
+	"math"
 	"os"
 	"path/filepath"
 	"strings"
-	"io"
-	"fmt"
-	"math"
-	"io/ioutil"
-	"bytes"
 )
 
 //==================================
@@ -56,16 +56,15 @@ func CopyFile(source string, dst string) (err error) {
 
 	defer sourceFile.Close()
 
-	_,err = os.Stat(filepath.Dir(dst))
+	_, err = os.Stat(filepath.Dir(dst))
 
 	if err != nil {
 		if os.IsNotExist(err) {
-			os.MkdirAll(filepath.Dir(dst),0766)
-		}else{
+			os.MkdirAll(filepath.Dir(dst), 0766)
+		} else {
 			return err
 		}
 	}
-
 
 	destFile, err := os.Create(dst)
 	if err != nil {
@@ -107,7 +106,7 @@ func CopyDir(source string, dest string) (err error) {
 
 	for _, obj := range objects {
 
-		sourceFilePointer := filepath.Join(source , obj.Name())
+		sourceFilePointer := filepath.Join(source, obj.Name())
 
 		destinationFilePointer := filepath.Join(dest, obj.Name())
 
@@ -206,14 +205,14 @@ func Round(val float64, places int) float64 {
 }
 
 //判断指定目录下是否存在指定后缀的文件
-func HasFileOfExt(path string,exts []string) bool {
+func HasFileOfExt(path string, exts []string) bool {
 	err := filepath.Walk(path, func(path string, info os.FileInfo, err error) error {
 		if !info.IsDir() {
 
 			ext := filepath.Ext(info.Name())
 
-			for _,item := range exts {
-				if strings.EqualFold(ext,item) {
+			for _, item := range exts {
+				if strings.EqualFold(ext, item) {
 					return os.ErrExist
 				}
 			}
@@ -224,6 +223,7 @@ func HasFileOfExt(path string,exts []string) bool {
 
 	return err == os.ErrExist
 }
+
 // IsImageExt 判断是否是图片后缀
 func IsImageExt(filename string) bool {
 	ext := filepath.Ext(filename)
@@ -232,25 +232,25 @@ func IsImageExt(filename string) bool {
 		strings.EqualFold(ext, ".jpeg") ||
 		strings.EqualFold(ext, ".png") ||
 		strings.EqualFold(ext, ".gif") ||
-		strings.EqualFold(ext,".svg") ||
-		strings.EqualFold(ext,".bmp") ||
-		strings.EqualFold(ext,".webp")
+		strings.EqualFold(ext, ".svg") ||
+		strings.EqualFold(ext, ".bmp") ||
+		strings.EqualFold(ext, ".webp")
 }
-//忽略字符串中的BOM头
-func ReadFileAndIgnoreUTF8BOM(filename string) ([]byte,error) {
 
-	data,err := ioutil.ReadFile(filename)
+//忽略字符串中的BOM头
+func ReadFileAndIgnoreUTF8BOM(filename string) ([]byte, error) {
+
+	data, err := ioutil.ReadFile(filename)
 	if err != nil {
-		return nil,err
+		return nil, err
 	}
 	if data == nil {
-		return nil,nil
+		return nil, nil
 	}
-	data = bytes.Replace(data,[]byte("\r"),[]byte(""),-1)
+	data = bytes.Replace(data, []byte("\r"), []byte(""), -1)
 	if len(data) >= 3 && data[0] == 0xef && data[1] == 0xbb && data[2] == 0xbf {
-		return data[3:],err
+		return data[3:], err
 	}
 
-
-	return data,nil
+	return data, nil
 }
