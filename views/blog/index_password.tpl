@@ -133,6 +133,6 @@ $("#auth_form").ajaxForm({
 });
 </script>
 
-        <script src="{{cdnjs "static/bootstrap/js/bootstrap.min.js"}}"></script>
+<script src="{{cdnjs "/twitter-bootstrap/3.3.7/js/bootstrap.min.js"}}"></script>
 </body>
 </html>
