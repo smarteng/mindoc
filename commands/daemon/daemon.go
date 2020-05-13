@@ -4,12 +4,13 @@ import (
 	"fmt"
 	"os"
 
+	"path/filepath"
+
 	"github.com/astaxie/beego"
 	"github.com/kardianos/service"
 	"github.com/smarteng/mindoc/commands"
 	"github.com/smarteng/mindoc/conf"
 	"github.com/smarteng/mindoc/controllers"
-	"path/filepath"
 )
 
 type Daemon struct {
@@ -44,7 +45,6 @@ func (d *Daemon) Start(s service.Service) error {
 
 func (d *Daemon) Run() {
 
-
 	commands.ResolveCommand(d.config.Arguments)
 
 	commands.RegisterFunction()
@@ -55,7 +55,7 @@ func (d *Daemon) Run() {
 
 	beego.ErrorController(&controllers.ErrorController{})
 
-	f,err := filepath.Abs(os.Args[0])
+	f, err := filepath.Abs(os.Args[0])
 
 	if err != nil {
 		f = os.Args[0]

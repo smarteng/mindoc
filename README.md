@@ -1,6 +1,5 @@
 # MinDoc 简介
 
-[![Build Status](https://travis-ci.org/smarteng/mindoc.svg?branch=master)](https://travis-ci.org/smarteng/mindoc)
 [![Build status](https://ci.appveyor.com/api/projects/status/ik70whjrioyvfy18/branch/master?svg=true)](https://ci.appveyor.com/project/smarteng/godoc/branch/master)
 
 MinDoc 是一款针对IT团队开发的简单好用的文档管理系统。
@@ -13,7 +12,7 @@ MinDoc 的前身是 SmartWiki 文档系统。SmartWiki 是基于 PHP 框架 lara
 
 演示站点： [http://doc.iminho.me](http://doc.iminho.me)
 
-# 安装与使用
+## 安装与使用
 
 **如果你的服务器上没有安装golang程序请手动设置一个环境变量如下：键名为 ZONEINFO，值为MinDoc跟目录下的/lib/time/zoneinfo.zip 。**
 
@@ -44,7 +43,6 @@ MinDoc 如果使用MySQL储存数据，则编码必须是`utf8mb4_general_ci`。
 
 **默认程序会自动初始化一个超级管理员用户：admin 密码：123456 。请登录后重新设置密码。**
 
-
 ```bash
 
 #邮件配置
@@ -64,8 +62,8 @@ form_user_name=admin@iminho.me
 mail_expired=30
 ```
 
+## 使用Docker部署
 
-# 使用Docker部署
 如果是Docker用户，可参考项目内置的Dockerfile文件编译镜像。
 
 在启动镜像时需要提供如下的环境变量：
@@ -85,12 +83,13 @@ HTTP_PORT                   程序监听的端口号
 ```bash
 docker run -p 8181:8181 --name mindoc -e DB_ADAPTER=mysql -e MYSQL_PORT_3306_TCP_ADDR=10.xxx.xxx.xxx -e MYSQL_PORT_3306_TCP_PORT=3306 -e MYSQL_INSTANCE_NAME=mindoc -e MYSQL_USERNAME=root -e MYSQL_PASSWORD=123456 -e httpport=8181 -d daocloud.io/smarteng/mindoc:latest
 ```
+
 ### docker-compose 一键安装
 
 1. 修改配置文件
     修改`docker-compose.yml`中的配置信息，主要修改`volumes`节点，将宿主机的两个目录映射到容器内。
     `environment`节点，配置自己的环境变量。
-    
+
 2. 一键完成所有环境搭建
     > docker-compose up -d
 3. 浏览器访问
@@ -109,8 +108,8 @@ docker run -p 8181:8181 --name mindoc -e DB_ADAPTER=mysql -e MYSQL_PORT_3306_TCP
    - 删除并重新创建
         > docker-compose -f docker-compose.yml down && docker-compose up -d
    更多 docker-compose 的使用相关的内容 请查看官网文档或百度
-   
-# 项目截图
+
+## 项目截图
 
 **创建项目**
 
@@ -148,8 +147,7 @@ docker run -p 8181:8181 --name mindoc -e DB_ADAPTER=mysql -e MYSQL_PORT_3306_TCP
 
 ![超级管理员后台](https://raw.githubusercontent.com/smarteng/mindoc/master/uploads/20170501204710.png)
 
-
-# 使用的技术
+## 使用的技术
 
 - beego 1.10.0
 - mysql 5.6
@@ -168,7 +166,7 @@ docker run -p 8181:8181 --name mindoc -e DB_ADAPTER=mysql -e MYSQL_PORT_3306_TCP
 - vue 框架
 
 
-# 主要功能
+## 主要功能
 
 - 项目管理，可以对项目进行编辑更改，成员添加等。
 - 文档管理，添加和删除文档等。
@@ -178,16 +176,16 @@ docker run -p 8181:8181 --name mindoc -e DB_ADAPTER=mysql -e MYSQL_PORT_3306_TCP
 - 项目加密，可以设置项目公开状态，私有项目需要通过Token访问。
 - 站点配置，可开启匿名访问、验证码等。
 
-# 参与开发
+## 参与开发
 
 我们欢迎您在 MinDoc 项目的 GitHub 上报告 issue 或者 pull request。
 
 如果您还不熟悉GitHub的Fork and Pull开发模式，您可以阅读GitHub的文档（https://help.github.com/articles/using-pull-requests） 获得更多的信息。
 
-# 关于作者
+## 关于作者
 
 一个不纯粹的PHPer，一个不自由的 gopher 。
 
-# 支持 MinDoc
+## 支持 MinDoc
 
 ![支付宝](https://raw.githubusercontent.com/smarteng/mindoc/master/static/images/alipay.png) ![微信支付](https://raw.githubusercontent.com/smarteng/mindoc/master/static/images/weixin.png)
