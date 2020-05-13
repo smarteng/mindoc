@@ -10,8 +10,8 @@
     <!-- Bootstrap -->
     <link href="{{cdncss "/twitter-bootstrap/3.3.7/css/bootstrap.min.css"}}" rel="stylesheet" type="text/css">
     <link href="{{cdncss "/font-awesome/4.7.0/css/font-awesome.min.css"}}" rel="stylesheet" type="text/css">
-    <link href="{{cdncss "/bootstrap/plugins/bootstrap-fileinput/4.4.7/css/fileinput.min.css"}}" rel="stylesheet" type="text/css">
-    <link href="{{cdncss "/bootstrap/plugins/bootstrap-fileinput/4.4.7/themes/explorer-fa/theme.css"}}" rel="stylesheet" type="text/css">
+    <link href="{{static "/bootstrap/plugins/bootstrap-fileinput/4.4.7/css/fileinput.min.css"}}" rel="stylesheet" type="text/css">
+    <link href="{{static "/bootstrap/plugins/bootstrap-fileinput/4.4.7/themes/explorer-fa/theme.css"}}" rel="stylesheet" type="text/css">
     <link href="{{cdncss "/select2/4.0.5/css/select2.min.css"}}" rel="stylesheet">
     <link href="{{static "/css/main.css" "version"}}" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -294,8 +294,8 @@
 <script src="{{cdnjs "/twitter-bootstrap/3.3.7/js/bootstrap.min.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/vue/2.2.6/vue.min.js"}}" type="text/javascript"></script>
 <script src="{{static "/js/jquery.form.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/bootstrap/plugins/bootstrap-fileinput/4.4.7/js/fileinput.min.js"}}"></script>
-<script src="{{cdnjs "/bootstrap/plugins/bootstrap-fileinput/4.4.7/js/locales/zh.js"}}"></script>
+<script src="{{static "/bootstrap/plugins/bootstrap-fileinput/4.4.7/js/fileinput.min.js"}}"></script>
+<script src="{{static "/bootstrap/plugins/bootstrap-fileinput/4.4.7/js/locales/zh.js"}}"></script>
 <script src="{{cdnjs "/layer/3.0.3/layer.js"}}" type="text/javascript" ></script>
 <script src="{{cdnjs "/select2/4.0.5/js/select2.full.min.js"}}"></script>
 <script src="{{cdnjs "/select2/4.0.5/js/i18n/zh-CN.js"}}"></script>

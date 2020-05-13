@@ -9,8 +9,8 @@
 
     <!-- Bootstrap -->
     <link href="{{cdncss "/twitter-bootstrap/3.3.7/css/bootstrap.min.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/bootstrap/plugins/tagsinput/bootstrap-tagsinput.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/bootstrap/plugins/bootstrap-switch/css/bootstrap3//bootstrap-switch.min.css"}}" rel="stylesheet">
+    <link href="{{static "/bootstrap/plugins/tagsinput/bootstrap-tagsinput.css"}}" rel="stylesheet">
+    <link href="{{static "/bootstrap/plugins/bootstrap-switch/css/bootstrap3//bootstrap-switch.min.css"}}" rel="stylesheet">
     <link href="{{cdncss "/font-awesome/4.7.0/css/font-awesome.min.css"}}" rel="stylesheet">
     <link href="{{cdncss "/webuploader/webuploader.css"}}" rel="stylesheet">
     <link href="{{cdncss "/cropper/2.3.4/cropper.min.css"}}" rel="stylesheet">
