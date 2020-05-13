@@ -193,7 +193,7 @@
 <script src="{{cdnjs "/wangEditor/plugins/release-menu.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/wangEditor/plugins/attach-menu.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/wangEditor/plugins/history-menu.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/layer/layer.js"}}" type="text/javascript" ></script>
+<script src="{{cdnjs "/layer/3.0.3/layer.js"}}" type="text/javascript" ></script>
 <script src="{{cdnjs "/to-markdown/dist/to-markdown.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/js/jquery.form.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/js/editor.js"}}" type="text/javascript"></script>

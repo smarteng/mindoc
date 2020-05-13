@@ -67,7 +67,7 @@
 {{template "widgets/footer.tpl" .}}
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="{{cdnjs "/twitter-bootstrap/3.3.7/js/bootstrap.min.js"}}"></script
-<script src="{{static "/layer/layer.js"}}" type="text/javascript"></script>
+<script src="{{static "/layer/3.0.3/layer.js"}}" type="text/javascript"></script>
 <script src="{{static "/js/jquery.form.js"}}" type="text/javascript"></script>
 <script type="text/javascript">
     $(function () {

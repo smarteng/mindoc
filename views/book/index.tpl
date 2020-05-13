@@ -296,7 +296,7 @@
 <script src="{{cdnjs "/js/jquery.form.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/bootstrap/plugins/bootstrap-fileinput/4.4.7/js/fileinput.min.js"}}"></script>
 <script src="{{cdnjs "/bootstrap/plugins/bootstrap-fileinput/4.4.7/js/locales/zh.js"}}"></script>
-<script src="{{cdnjs "/layer/layer.js"}}" type="text/javascript" ></script>
+<script src="{{cdnjs "/layer/3.0.3/layer.js"}}" type="text/javascript" ></script>
 <script src="{{cdnjs "/select2/4.0.5/js/select2.full.min.js"}}"></script>
 <script src="{{cdnjs "/select2/4.0.5/js/i18n/zh-CN.js"}}"></script>
 <script src="{{static "/js/main.js"}}" type="text/javascript"></script>
