@@ -2,11 +2,12 @@ package controllers
 
 import (
 	"math"
-	"github.com/astaxie/beego"
-	"github.com/smarteng/mindoc/models"
-	"github.com/lifei6671/mindoc/utils/pagination"
-	"github.com/lifei6671/mindoc/conf"
 	"net/url"
+
+	"github.com/astaxie/beego"
+	"github.com/smarteng/mindoc/conf"
+	"github.com/smarteng/mindoc/models"
+	"github.com/smarteng/mindoc/utils/pagination"
 )
 
 type HomeController struct {

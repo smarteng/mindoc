@@ -9,9 +9,9 @@ import (
 
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
-	"github.com/lifei6671/mindoc/conf"
-	"github.com/lifei6671/mindoc/utils"
+	"github.com/smarteng/mindoc/conf"
 	"github.com/smarteng/mindoc/models"
+	"github.com/smarteng/mindoc/utils"
 )
 
 //系统安装.

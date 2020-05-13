@@ -6,8 +6,8 @@ import (
 
 	"github.com/astaxie/beego"
 	"github.com/kardianos/service"
-	"github.com/lifei6671/mindoc/commands"
-	"github.com/lifei6671/mindoc/conf"
+	"github.com/smarteng/mindoc/commands"
+	"github.com/smarteng/mindoc/conf"
 	"github.com/smarteng/mindoc/controllers"
 	"path/filepath"
 )

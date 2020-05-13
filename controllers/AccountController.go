@@ -6,13 +6,14 @@ import (
 	"strings"
 	"time"
 
+	"html/template"
+
 	"github.com/astaxie/beego"
 	"github.com/lifei6671/gocaptcha"
-	"github.com/lifei6671/mindoc/conf"
-	"github.com/lifei6671/mindoc/mail"
+	"github.com/smarteng/mindoc/conf"
+	"github.com/smarteng/mindoc/mail"
 	"github.com/smarteng/mindoc/models"
-	"github.com/lifei6671/mindoc/utils"
-	"html/template"
+	"github.com/smarteng/mindoc/utils"
 )
 
 // AccountController 用户登录与注册
@@ -117,7 +118,7 @@ func (c *AccountController) Login() {
 				remember.Time = time.Now()
 				v, err := utils.Encode(remember)
 				if err == nil {
-					c.SetSecureCookie(conf.GetAppKey(), "login", v, time.Now().Add(time.Hour * 24 * 30).Unix())
+					c.SetSecureCookie(conf.GetAppKey(), "login", v, time.Now().Add(time.Hour*24*30).Unix())
 				}
 			}
 

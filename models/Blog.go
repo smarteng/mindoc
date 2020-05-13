@@ -3,14 +3,15 @@ package models
 import (
 	"bytes"
 	"fmt"
+	"strings"
+	"time"
+
 	"github.com/PuerkitoBio/goquery"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
-	"github.com/lifei6671/mindoc/cache"
-	"github.com/lifei6671/mindoc/conf"
-	"github.com/lifei6671/mindoc/utils"
-	"strings"
-	"time"
+	"github.com/smarteng/mindoc/cache"
+	"github.com/smarteng/mindoc/conf"
+	"github.com/smarteng/mindoc/utils"
 )
 
 //博文表

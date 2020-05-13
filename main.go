@@ -9,9 +9,9 @@ import (
 	_ "github.com/astaxie/beego/session/mysql"
 	_ "github.com/astaxie/beego/session/redis"
 	"github.com/kardianos/service"
-	"github.com/lifei6671/mindoc/commands"
-	"github.com/lifei6671/mindoc/commands/daemon"
-	_ "github.com/lifei6671/mindoc/routers"
+	"github.com/smarteng/mindoc/commands"
+	"github.com/smarteng/mindoc/commands/daemon"
+	_ "github.com/smarteng/mindoc/routers"
 	_ "github.com/mattn/go-sqlite3"
 )
 

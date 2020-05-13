@@ -19,13 +19,13 @@ import (
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
 	"github.com/astaxie/beego/orm"
-	"github.com/lifei6671/mindoc/conf"
-	"github.com/lifei6671/mindoc/utils"
-	"github.com/lifei6671/mindoc/utils/cryptil"
-	"github.com/lifei6671/mindoc/utils/filetil"
-	"github.com/lifei6671/mindoc/utils/requests"
-	"github.com/lifei6671/mindoc/utils/ziptil"
 	"github.com/russross/blackfriday/v2"
+	"github.com/smarteng/mindoc/conf"
+	"github.com/smarteng/mindoc/utils"
+	"github.com/smarteng/mindoc/utils/cryptil"
+	"github.com/smarteng/mindoc/utils/filetil"
+	"github.com/smarteng/mindoc/utils/requests"
+	"github.com/smarteng/mindoc/utils/ziptil"
 )
 
 var releaseQueue = make(chan int, 500)

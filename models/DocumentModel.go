@@ -7,15 +7,16 @@ import (
 	"strconv"
 
 	"bytes"
-	"github.com/PuerkitoBio/goquery"
-	"github.com/astaxie/beego"
-	"github.com/astaxie/beego/orm"
-	"github.com/lifei6671/mindoc/cache"
-	"github.com/lifei6671/mindoc/conf"
-	"github.com/lifei6671/mindoc/utils"
 	"os"
 	"path/filepath"
 	"strings"
+
+	"github.com/PuerkitoBio/goquery"
+	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/orm"
+	"github.com/smarteng/mindoc/cache"
+	"github.com/smarteng/mindoc/conf"
+	"github.com/smarteng/mindoc/utils"
 )
 
 // Document struct.

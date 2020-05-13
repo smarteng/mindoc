@@ -1,14 +1,15 @@
 package models
 
 import (
-	"time"
-	"github.com/lifei6671/mindoc/conf"
-	"github.com/astaxie/beego/orm"
-	"github.com/astaxie/beego"
 	"errors"
-	"github.com/lifei6671/mindoc/utils/cryptil"
-	"github.com/lifei6671/mindoc/utils"
 	"strings"
+	"time"
+
+	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/orm"
+	"github.com/smarteng/mindoc/conf"
+	"github.com/smarteng/mindoc/utils"
+	"github.com/smarteng/mindoc/utils/cryptil"
 )
 
 //项目空间

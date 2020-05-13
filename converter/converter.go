@@ -10,15 +10,16 @@ import (
 	"path/filepath"
 	"strings"
 
-	"time"
-	"os/exec"
 	"errors"
+	"os/exec"
+	"time"
 
-	"github.com/lifei6671/mindoc/utils/filetil"
-	"github.com/lifei6671/mindoc/utils/ziptil"
-	"github.com/lifei6671/mindoc/utils/cryptil"
-	"sync"
 	"html"
+	"sync"
+
+	"github.com/smarteng/mindoc/utils/cryptil"
+	"github.com/smarteng/mindoc/utils/filetil"
+	"github.com/smarteng/mindoc/utils/ziptil"
 )
 
 type Converter struct {

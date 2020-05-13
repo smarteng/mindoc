@@ -1,7 +1,7 @@
 # MinDoc 简介
 
-[![Build Status](https://travis-ci.org/lifei6671/mindoc.svg?branch=master)](https://travis-ci.org/lifei6671/mindoc)
-[![Build status](https://ci.appveyor.com/api/projects/status/ik70whjrioyvfy18/branch/master?svg=true)](https://ci.appveyor.com/project/lifei6671/godoc/branch/master)
+[![Build Status](https://travis-ci.org/smarteng/mindoc.svg?branch=master)](https://travis-ci.org/smarteng/mindoc)
+[![Build status](https://ci.appveyor.com/api/projects/status/ik70whjrioyvfy18/branch/master?svg=true)](https://ci.appveyor.com/project/smarteng/godoc/branch/master)
 
 MinDoc 是一款针对IT团队开发的简单好用的文档管理系统。
 
@@ -19,12 +19,12 @@ MinDoc 的前身是 SmartWiki 文档系统。SmartWiki 是基于 PHP 框架 lara
 
 更多信息请查看手册： [MinDoc 使用手册](https://www.iminho.me/wiki/docs/mindoc/mindoc-summary.md)
 
-对于没有Golang使用经验的用户，可以从 [https://github.com/lifei6671/mindoc/releases](https://github.com/lifei6671/mindoc/releases) 这里下载编译完的程序。
+对于没有Golang使用经验的用户，可以从 [https://github.com/smarteng/mindoc/releases](https://github.com/smarteng/mindoc/releases) 这里下载编译完的程序。
 
 如果有Golang开发经验，建议通过编译安装，在此之前，您需要先安装Golang官方包管理工具，详见[Install dep](https://golang.github.io/dep/docs/installation.html)。
 
 ```bash
-git clone https://github.com/lifei6671/mindoc.git
+git clone https://github.com/smarteng/mindoc.git
 
 dep ensure
 
@@ -83,7 +83,7 @@ HTTP_PORT                   程序监听的端口号
 举个栗子
 
 ```bash
-docker run -p 8181:8181 --name mindoc -e DB_ADAPTER=mysql -e MYSQL_PORT_3306_TCP_ADDR=10.xxx.xxx.xxx -e MYSQL_PORT_3306_TCP_PORT=3306 -e MYSQL_INSTANCE_NAME=mindoc -e MYSQL_USERNAME=root -e MYSQL_PASSWORD=123456 -e httpport=8181 -d daocloud.io/lifei6671/mindoc:latest
+docker run -p 8181:8181 --name mindoc -e DB_ADAPTER=mysql -e MYSQL_PORT_3306_TCP_ADDR=10.xxx.xxx.xxx -e MYSQL_PORT_3306_TCP_PORT=3306 -e MYSQL_INSTANCE_NAME=mindoc -e MYSQL_USERNAME=root -e MYSQL_PASSWORD=123456 -e httpport=8181 -d daocloud.io/smarteng/mindoc:latest
 ```
 ### docker-compose 一键安装
 
@@ -114,39 +114,39 @@ docker run -p 8181:8181 --name mindoc -e DB_ADAPTER=mysql -e MYSQL_PORT_3306_TCP
 
 **创建项目**
 
-![创建项目](https://raw.githubusercontent.com/lifei6671/mindoc/master/uploads/20170501204438.png)
+![创建项目](https://raw.githubusercontent.com/smarteng/mindoc/master/uploads/20170501204438.png)
 
 **项目列表**
 
-![项目列表](https://raw.githubusercontent.com/lifei6671/mindoc/master/uploads/20170501203542.png)
+![项目列表](https://raw.githubusercontent.com/smarteng/mindoc/master/uploads/20170501203542.png)
 
 **项目概述**
 
-![项目概述](https://raw.githubusercontent.com/lifei6671/mindoc/master/uploads/20170501203619.png)
+![项目概述](https://raw.githubusercontent.com/smarteng/mindoc/master/uploads/20170501203619.png)
 
 **项目成员**
 
-![项目成员](https://raw.githubusercontent.com/lifei6671/mindoc/master/uploads/20170501203637.png)
+![项目成员](https://raw.githubusercontent.com/smarteng/mindoc/master/uploads/20170501203637.png)
 
 **项目设置**
 
-![项目设置](https://raw.githubusercontent.com/lifei6671/mindoc/master/uploads/20170501203656.png)
+![项目设置](https://raw.githubusercontent.com/smarteng/mindoc/master/uploads/20170501203656.png)
 
 **基于Editor.md开发的Markdown编辑器**
 
-![基于Editor.md开发的Markdown编辑器](https://raw.githubusercontent.com/lifei6671/mindoc/master/uploads/20170501203854.png)
+![基于Editor.md开发的Markdown编辑器](https://raw.githubusercontent.com/smarteng/mindoc/master/uploads/20170501203854.png)
 
 **基于wangEditor开发的富文本编辑器**
 
-![基于wangEditor开发的富文本编辑器](https://raw.githubusercontent.com/lifei6671/mindoc/master/uploads/20170501204651.png)
+![基于wangEditor开发的富文本编辑器](https://raw.githubusercontent.com/smarteng/mindoc/master/uploads/20170501204651.png)
 
 **项目预览**
 
-![项目预览](https://raw.githubusercontent.com/lifei6671/mindoc/master/uploads/20170501204609.png)
+![项目预览](https://raw.githubusercontent.com/smarteng/mindoc/master/uploads/20170501204609.png)
 
 **超级管理员后台**
 
-![超级管理员后台](https://raw.githubusercontent.com/lifei6671/mindoc/master/uploads/20170501204710.png)
+![超级管理员后台](https://raw.githubusercontent.com/smarteng/mindoc/master/uploads/20170501204710.png)
 
 
 # 使用的技术
@@ -190,4 +190,4 @@ docker run -p 8181:8181 --name mindoc -e DB_ADAPTER=mysql -e MYSQL_PORT_3306_TCP
 
 # 支持 MinDoc
 
-![支付宝](https://raw.githubusercontent.com/lifei6671/mindoc/master/static/images/alipay.png) ![微信支付](https://raw.githubusercontent.com/lifei6671/mindoc/master/static/images/weixin.png)
+![支付宝](https://raw.githubusercontent.com/smarteng/mindoc/master/static/images/alipay.png) ![微信支付](https://raw.githubusercontent.com/smarteng/mindoc/master/static/images/weixin.png)

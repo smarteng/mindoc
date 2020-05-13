@@ -5,10 +5,10 @@ import (
 	"strings"
 
 	"github.com/astaxie/beego"
-	"github.com/lifei6671/mindoc/conf"
+	"github.com/smarteng/mindoc/conf"
 	"github.com/smarteng/mindoc/models"
-	"github.com/lifei6671/mindoc/utils"
-	"github.com/lifei6671/mindoc/utils/pagination"
+	"github.com/smarteng/mindoc/utils"
+	"github.com/smarteng/mindoc/utils/pagination"
 	"github.com/smarteng/mindoc/utils/sqltil"
 )
 

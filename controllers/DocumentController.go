@@ -19,14 +19,14 @@ import (
 	"github.com/astaxie/beego/orm"
 	"github.com/boombuler/barcode"
 	"github.com/boombuler/barcode/qr"
-	"github.com/lifei6671/mindoc/conf"
-	"github.com/smarteng/mindoc/models"
-	"github.com/lifei6671/mindoc/utils"
-	"github.com/lifei6671/mindoc/utils/cryptil"
-	"github.com/lifei6671/mindoc/utils/filetil"
-	"github.com/lifei6671/mindoc/utils/gopool"
-	"github.com/lifei6671/mindoc/utils/pagination"
 	"github.com/russross/blackfriday/v2"
+	"github.com/smarteng/mindoc/conf"
+	"github.com/smarteng/mindoc/models"
+	"github.com/smarteng/mindoc/utils"
+	"github.com/smarteng/mindoc/utils/cryptil"
+	"github.com/smarteng/mindoc/utils/filetil"
+	"github.com/smarteng/mindoc/utils/gopool"
+	"github.com/smarteng/mindoc/utils/pagination"
 )
 
 // DocumentController struct
