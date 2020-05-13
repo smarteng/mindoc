@@ -31,3 +31,5 @@ settings.json
 .github
 .vscode
 /uploads
+.DS_Store 
+*/.DS_Store 
