@@ -427,16 +427,13 @@ func (c *BlogController) Upload() {
 	}
 
 	blog, err := models.NewBlog().Find(blogId)
-
 	if err != nil {
 		c.JsonResult(6010, "文章不存在")
 	}
 	if !c.Member.IsAdministrator() && blog.MemberId != c.Member.MemberId {
 		c.JsonResult(6011, "没有文章的访问权限")
 	}
-
 	name := "editormd-file-file"
-
 	file, moreFile, err := c.GetFile(name)
 	if err == http.ErrMissingFile {
 		name = "editormd-image-file"
@@ -455,9 +452,7 @@ func (c *BlogController) Upload() {
 	if conf.GetUploadFileSize() > 0 && moreFile.Size > conf.GetUploadFileSize() {
 		c.JsonResult(6009, "查过文件允许的上传最大值")
 	}
-
 	ext := filepath.Ext(moreFile.Filename)
-
 	if ext == "" {
 		c.JsonResult(6003, "无法解析文件的格式")
 	}
@@ -467,15 +462,12 @@ func (c *BlogController) Upload() {
 			c.JsonResult(6004, "不允许的文件类型")
 		}
 	}
-
 	// 如果是超级管理员，则不判断权限
 	if c.Member.IsAdministrator() {
 		_, err := models.NewBlog().Find(blogId)
-
 		if err != nil {
 			c.JsonResult(6006, "文档不存在或权限不足")
 		}
-
 	} else {
 		_, err := models.NewBlog().FindByIdAndMemberId(blogId, c.Member.MemberId)
 
@@ -488,15 +480,10 @@ func (c *BlogController) Upload() {
 			c.JsonResult(6001, err.Error())
 		}
 	}
-
 	fileName := "attach_" + strconv.FormatInt(time.Now().UnixNano(), 16)
-
 	filePath := filepath.Join(conf.WorkingDirectory, "uploads", "blog", time.Now().Format("200601"), fileName+ext)
-
 	path := filepath.Dir(filePath)
-
 	os.MkdirAll(path, os.ModePerm)
-
 	err = c.SaveToFile(name, filePath)
 
 	if err != nil {

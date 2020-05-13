@@ -17,6 +17,7 @@ import (
 	"regexp"
 	"strconv"
 	"strings"
+
 	"github.com/astaxie/beego"
 )
 
@@ -229,7 +230,6 @@ func (c *SMTPClient) SendTLS(m Mail, message bytes.Buffer) error {
 		return err
 	}
 
-
 	ct, err = smtp.NewClient(conn, c.host)
 	if err != nil {
 		log.Println(err)
@@ -247,7 +247,7 @@ func (c *SMTPClient) SendTLS(m Mail, message bytes.Buffer) error {
 	//}
 
 	fmt.Println(c.smtpAuth)
-	if ok,s := ct.Extension("AUTH"); ok {
+	if ok, s := ct.Extension("AUTH"); ok {
 		beego.Info(s)
 		// Auth
 		if err = ct.Auth(c.smtpAuth); err != nil {

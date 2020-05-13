@@ -161,28 +161,20 @@ func RegisterLogger(log string) {
 		switch level {
 		case "Emergency":
 			config["level"] = beego.LevelEmergency
-			break
 		case "Alert":
 			config["level"] = beego.LevelAlert
-			break
 		case "Critical":
 			config["level"] = beego.LevelCritical
-			break
 		case "Error":
 			config["level"] = beego.LevelError
-			break
 		case "Warning":
 			config["level"] = beego.LevelWarning
-			break
 		case "Notice":
 			config["level"] = beego.LevelNotice
-			break
 		case "Informational":
 			config["level"] = beego.LevelInformational
-			break
 		case "Debug":
 			config["level"] = beego.LevelDebug
-			break
 		}
 	}
 	b, err := json.Marshal(config)
