@@ -121,7 +121,7 @@
 
 <script src="{{cdnjs "/jquery/1.12.4/jquery.min.js"}}"></script>
 <script src="{{cdnjs "/twitter-bootstrap/3.3.7/js/bootstrap.min.js"}}"></script>
-<script src="{{cdnjs "/vue/2.2.6/vue.min.js"}}"></script>
+<script src="{{cdnjs "/vue/2.6.11/vue.min.js"}}"></script>
 <script src="{{static "/js/jquery.form.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/select2/4.0.5/js/select2.full.min.js"}}"></script>
 <script src="{{cdnjs "/select2/4.0.5/js/i18n/zh-CN.js"}}"></script>

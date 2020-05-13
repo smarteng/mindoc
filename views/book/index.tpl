@@ -292,7 +292,7 @@
 
 <script src="{{cdnjs "/jquery/1.12.4/jquery.min.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/twitter-bootstrap/3.3.7/js/bootstrap.min.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/vue/2.2.6/vue.min.js"}}" type="text/javascript"></script>
+<script src="{{cdnjs "/vue/2.6.11/vue.min.js"}}" type="text/javascript"></script>
 <script src="{{static "/js/jquery.form.js"}}" type="text/javascript"></script>
 <script src="{{static "/bootstrap/plugins/bootstrap-fileinput/4.4.7/js/fileinput.min.js"}}"></script>
 <script src="{{static "/bootstrap/plugins/bootstrap-fileinput/4.4.7/js/locales/zh.js"}}"></script>
