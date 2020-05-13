@@ -101,7 +101,7 @@ func GetTokenSize() int {
 //获取默认文档封面.
 func GetDefaultCover() string {
 
-	return URLForWithCdnImage(beego.AppConfig.DefaultString("cover", "/static/images/book.jpg"))
+	return URLForWithCdnImage(beego.AppConfig.DefaultString("cover", "/images/book.jpg"))
 }
 
 //获取允许的商城文件的类型.
