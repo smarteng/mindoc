@@ -27,3 +27,5 @@ _testmain.go
 /vendor
 /runtime
 settings.json
+.github
+.vscode
