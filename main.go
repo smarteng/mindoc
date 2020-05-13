@@ -9,10 +9,10 @@ import (
 	_ "github.com/astaxie/beego/session/mysql"
 	_ "github.com/astaxie/beego/session/redis"
 	"github.com/kardianos/service"
+	_ "github.com/mattn/go-sqlite3"
 	"github.com/smarteng/mindoc/commands"
 	"github.com/smarteng/mindoc/commands/daemon"
 	_ "github.com/smarteng/mindoc/routers"
-	_ "github.com/mattn/go-sqlite3"
 )
 
 func main() {
@@ -26,10 +26,9 @@ func main() {
 			daemon.Restart()
 		}
 	}
+
 	commands.RegisterCommand()
-
 	d := daemon.NewDaemon()
-
 	s, err := service.New(d, d.Config())
 
 	if err != nil {

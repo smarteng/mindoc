@@ -34,9 +34,11 @@ sessiongcmaxlifetime="${MINDOC_SESSION_MAX_LIFETIME||3600}"
 #sessionprovider=file
 #sessionproviderconfig=./runtime/session
 
-#以redis方式储存
-#sessionprovider=redis
-#sessionproviderconfig=127.0.0.1:6379
+#以redis方式储存,打开下面的配置
+#sessionprovider="${MINDOC_SESSION_PROVIDER||redis}"
+# redis配置格式: redis地址,redis连接池最大连接数,redis密码
+# redis连接池和redis密码配置，没有保持为空，例子: 127.0.0.1:6379
+#sessionproviderconfig="${MINDOC_SESSION_PROVIDER_CONFIG||9.134.34.196:6379,1000,123456}
 
 #以memcache方式储存
 #sessionprovider=memcache
