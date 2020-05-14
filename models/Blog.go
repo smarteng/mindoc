@@ -102,8 +102,8 @@ func (b *Blog) Find(blogId int) (*Blog, error) {
 }
 
 //从缓存中读取文章
-func (b *Blog) FindFromCache(blogId int) (blog *Blog, err error) {
-	key := fmt.Sprintf("blog-id-%d", blogId)
+func (b *Blog) FindFromCache(blogID int) (blog *Blog, err error) {
+	key := fmt.Sprintf("blog-id-%d", blogID)
 	var temp Blog
 	err = cache.Get(key, &temp)
 	if err == nil {
@@ -115,7 +115,7 @@ func (b *Blog) FindFromCache(blogId int) (blog *Blog, err error) {
 		beego.Error("读取缓存失败 ->", err)
 	}
 
-	blog, err = b.Find(blogId)
+	blog, err = b.Find(blogID)
 	if err == nil {
 		//默认一个小时
 		if err := cache.Put(key, blog, time.Hour*1); err != nil {
@@ -126,10 +126,10 @@ func (b *Blog) FindFromCache(blogId int) (blog *Blog, err error) {
 }
 
 //查找指定用户的指定文章
-func (b *Blog) FindByIdAndMemberId(blogId, memberId int) (*Blog, error) {
+func (b *Blog) FindByIdAndMemberId(blogID, memberId int) (*Blog, error) {
 	o := orm.NewOrm()
 
-	err := o.QueryTable(b.TableNameWithPrefix()).Filter("blog_id", blogId).Filter("member_id", memberId).One(b)
+	err := o.QueryTable(b.TableNameWithPrefix()).Filter("blog_id", blogID).Filter("member_id", memberId).One(b)
 	if err != nil {
 		beego.Error("查询文章时失败 -> ", err)
 		return nil, err

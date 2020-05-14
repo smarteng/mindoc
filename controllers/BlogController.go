@@ -34,7 +34,8 @@ type BlogController struct {
 func (c *BlogController) Prepare() {
 	c.BaseController.Prepare()
 	if !c.EnableAnonymous && c.Member == nil {
-		c.Redirect(conf.URLFor("AccountController.Login")+"?url="+url.PathEscape(conf.BaseUrl+c.Ctx.Request.URL.RequestURI()), 302)
+		refer := url.PathEscape(conf.BaseUrl + c.Ctx.Request.URL.RequestURI())
+		c.Redirect(conf.URLFor("AccountController.Login")+"?url="+refer, 302)
 	}
 }
 
@@ -43,12 +44,11 @@ func (c *BlogController) Index() {
 	c.Prepare()
 	c.TplName = "blog/index.tpl"
 	blogID, _ := strconv.Atoi(c.Ctx.Input.Param(":id"))
-
+	fmt.Println(blogID)
 	if blogID <= 0 {
 		c.ShowErrorPage(404, "页面不存在")
 	}
 	blogReadSession := fmt.Sprintf("blog:read:%d", blogID)
-
 	blog, err := models.NewBlog().FindFromCache(blogID)
 
 	if err != nil {
