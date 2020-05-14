@@ -8,6 +8,7 @@ import (
 	"errors"
 	"fmt"
 	"io/ioutil"
+	"math"
 	"net/http"
 	"net/url"
 	"regexp"
@@ -15,13 +16,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/go-ldap/ldap/v3"
-
-	"math"
-
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
 	"github.com/astaxie/beego/orm"
+	"github.com/go-ldap/ldap/v3"
 	"github.com/smarteng/mindoc/conf"
 	"github.com/smarteng/mindoc/utils"
 )
@@ -34,7 +32,7 @@ type Member struct {
 	//认证方式: local 本地数据库 /ldap LDAP
 	AuthMethod  string `orm:"column(auth_method);default(local);size(50);" json:"auth_method"`
 	Description string `orm:"column(description);size(2000)" json:"description"`
-	Email       string `orm:"size(100);column(email);unique" json:"email"`
+	Email       string `orm:"size(100);column(email);unique" json:"email" valid:"Email; MaxSize(100)"`
 	Phone       string `orm:"size(255);column(phone);null;default(null)" json:"phone"`
 	Avatar      string `orm:"size(1000);column(avatar)" json:"avatar"`
 	//用户角色：0 超级管理员 /1 管理员/ 2 普通用户 .
@@ -245,10 +243,7 @@ func (m *Member) Add() error {
 	if ok, err := regexp.MatchString(conf.RegexpAccount, m.Account); m.Account == "" || !ok || err != nil {
 		return errors.New("账号只能由英文字母数字组成，且在3-50个字符")
 	}
-	if m.Email == "" {
-		return errors.New("邮箱不能为空")
-	}
-	if ok, err := regexp.MatchString(conf.RegexpEmail, m.Email); !ok || err != nil || m.Email == "" {
+	if v := valid.Required(m.Email,"email"); !v.Ok {
 		return errors.New("邮箱格式不正确")
 	}
 	if m.AuthMethod == "local" {
@@ -405,7 +400,7 @@ func (m *Member) Valid(is_hash_password bool) error {
 		m.Status = 0
 	}
 	//邮箱格式校验
-	if ok, err := regexp.MatchString(conf.RegexpEmail, m.Email); !ok || err != nil || m.Email == "" {
+	if v := valid.Required(m.Email,"email"); !v.Ok {
 		return ErrMemberEmailFormatError
 	}
 	//如果是未加密密码，需要校验密码格式
