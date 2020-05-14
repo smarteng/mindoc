@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
-	"runtime"
 	"strconv"
 	"strings"
 
@@ -79,7 +78,6 @@ var (
 
 func init() {
 	VERSION = beego.AppConfig.String("version")
-	GO_VERSION = runtime.Version()
 }
 
 // app_key
