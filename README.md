@@ -24,15 +24,10 @@ MinDoc 的前身是 SmartWiki 文档系统。SmartWiki 是基于 PHP 框架 lara
 
 ```bash
 git clone https://github.com/smarteng/mindoc.git
-
-dep ensure
-
+go mod download
 go build -ldflags "-w"
-
 ./mindoc install
-
 ./mindoc
-
 ```
 
 MinDoc 如果使用MySQL储存数据，则编码必须是`utf8mb4_general_ci`。请在安装前，把数据库配置填充到项目目录下的 `conf/app.conf` 中。
