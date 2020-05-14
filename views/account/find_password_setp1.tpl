@@ -16,8 +16,8 @@
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="/static/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="/static/respond.js/1.4.2/respond.min.js"></script>
+    <script src="{{cdnjs "/html5shiv/3.7.3/html5shiv.min.js"}}"></script>
+    <script src="{{cdnjs "/respond.js/1.4.2/respond.min.js"}}"></script>
     <![endif]-->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="{{cdnjs "/jquery/1.12.4/jquery.min.js"}}"></script>
@@ -66,7 +66,7 @@
 </div>
 {{template "widgets/footer.tpl" .}}
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="{{cdnjs "/twitter-bootstrap/3.3.7/js/bootstrap.min.js"}}"></script
+<script src="{{cdnjs "/twitter-bootstrap/3.3.7/js/bootstrap.min.js"}}"></script>
 <script src="{{static "/layer/3.0.3/layer.js"}}" type="text/javascript"></script>
 <script src="{{static "/js/jquery.form.js"}}" type="text/javascript"></script>
 <script type="text/javascript">
