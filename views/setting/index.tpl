@@ -10,7 +10,7 @@
     <!-- Bootstrap -->
     <link href="{{cdncss "/twitter-bootstrap/3.3.7/css/bootstrap.min.css"}}" rel="stylesheet">
     <link href="{{cdncss "/font-awesome/4.7.0/css/font-awesome.min.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/webuploader/webuploader.css"}}" rel="stylesheet">
+    <link href="{{static "/webuploader/webuploader.css"}}" rel="stylesheet">
     <link href="{{cdncss "/cropper/2.3.4/cropper.min.css"}}" rel="stylesheet">
     <link href="{{static "/css/main.css" "version"}}" rel="stylesheet">
 

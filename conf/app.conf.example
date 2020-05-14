@@ -155,6 +155,9 @@ cdnimg="${MINDOC_CDN_IMG_URL||/static}"
 # 静态文件：站点的css js,不用cdn的存放站点上的
 static="${MINDOC_CDN_IMG_URL||/static}"
 
+# 上传文件路径设置，可以设置相应的腾讯云cos
+#uploadimg="${MINDOC_CDN_IMG_URL||//tencentcloud.com/xxx/xx}"
+uploadimg="${MINDOC_CDN_IMG_URL}
 ######################缓存配置###############################
 
 #是否开启缓存，true 开启/false 不开启

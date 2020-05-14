@@ -272,7 +272,7 @@ func (b *Blog) Processor() *Blog {
 			}
 		})
 		//设置图片为CDN地址
-		if cdnimg := beego.AppConfig.String("cdnimg"); cdnimg != "" {
+		if cdnimg := beego.AppConfig.String("uploadimg"); cdnimg != "" {
 			content.Find("img").Each(func(i int, contentSelection *goquery.Selection) {
 				if src, ok := contentSelection.Attr("src"); ok && strings.HasPrefix(src, "/uploads/") {
 					contentSelection.SetAttr("src", utils.JoinURI(cdnimg, src))

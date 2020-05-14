@@ -15,13 +15,13 @@
     <link href="{{cdncss "/twitter-bootstrap/3.3.7/css/bootstrap.min.css"}}" rel="stylesheet">
 
     <link href="{{cdncss "/font-awesome/4.7.0/css/font-awesome.min.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/editor.md/lib/mermaid/mermaid.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/editor.md/lib/sequence/sequence-diagram-min.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/css/kancloud.css" "version"}}" rel="stylesheet">
-    <link href="{{cdncss "/editor.md/css/editormd.preview.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/css/markdown.preview.css" "version"}}" rel="stylesheet">
-    <link href="{{cdncss (print "/editor.md/lib/highlight/styles/" .HighlightStyle ".css") "version"}}" rel="stylesheet">
-    <link href="{{cdncss "/katex/katex.min.css"}}" rel="stylesheet">
+    <link href="{{static "/editor.md/lib/mermaid/mermaid.css"}}" rel="stylesheet">
+    <link href="{{static "/editor.md/lib/sequence/sequence-diagram-min.css"}}" rel="stylesheet">
+    <link href="{{static "/css/kancloud.css" "version"}}" rel="stylesheet">
+    <link href="{{static "/editor.md/css/editormd.preview.css"}}" rel="stylesheet">
+    <link href="{{static "/css/markdown.preview.css" "version"}}" rel="stylesheet">
+    <link href="{{static (print "/editor.md/lib/highlight/styles/" .HighlightStyle ".css") "version"}}" rel="stylesheet">
+    <link href="{{static "/katex/katex.min.css"}}" rel="stylesheet">
     <link href="{{static "/css/print.css"}}" media="print" rel="stylesheet">
     <link href="{{static "/css/main.css" "version"}}" rel="stylesheet">
     <style type="text/css">

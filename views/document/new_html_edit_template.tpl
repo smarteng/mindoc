@@ -25,12 +25,12 @@
     <link href="{{cdncss "/twitter-bootstrap/3.3.7/css/bootstrap.min.css"}}" rel="stylesheet">
     <link href="{{cdncss "/font-awesome/4.7.0/css/font-awesome.min.css"}}" rel="stylesheet">
     <link href="{{cdncss "/jstree/3.3.4/themes/default/style.min.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/css/jstree.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/webuploader/webuploader.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/css/markdown.css" "version"}}" rel="stylesheet">
+    <link href="{{static "/css/jstree.css"}}" rel="stylesheet">
+    <link href="{{static "/webuploader/webuploader.css"}}" rel="stylesheet">
+    <link href="{{static "/css/markdown.css" "version"}}" rel="stylesheet">
     <link href="{{cdncss "/prettify/themes/atelier-estuary-dark.min.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/css/markdown.preview.css" "version"}}" rel="stylesheet">
-    <link href="{{cdncss (print "/editor.md/lib/highlight/styles/" .HighlightStyle ".css") "version"}}" rel="stylesheet">
+    <link href="{{static "/css/markdown.preview.css" "version"}}" rel="stylesheet">
+    <link href="{{static (print "/editor.md/lib/highlight/styles/" .HighlightStyle ".css") "version"}}" rel="stylesheet">
     <link href="{{cdncss "/katex/katex.min.css"}}" rel="stylesheet">
     <link href="{{cdncss "/quill/quill.core.css"}}" rel="stylesheet">
     <link href="{{cdncss "/quill/quill.snow.css"}}" rel="stylesheet">
@@ -374,16 +374,16 @@
 <script src="{{cdnjs "/twitter-bootstrap/3.3.7/js/bootstrap.min.js"}}"></script>
 <script src="{{static "/webuploader/webuploader.min.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/jstree/3.3.4/jstree.min.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/katex/katex.min.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/to-markdown/dist/to-markdown.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/quill/quill.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/quill/quill.icons.js"}}" type="text/javascript"></script>
+<script src="{{static "/katex/katex.min.js"}}" type="text/javascript"></script>
+<script src="{{static "/to-markdown/dist/to-markdown.js"}}" type="text/javascript"></script>
+<script src="{{static "/quill/quill.js"}}" type="text/javascript"></script>
+<script src="{{static "/quill/quill.icons.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/layer/3.0.3/layer.js"}}" type="text/javascript" ></script>
 <script src="{{static "/js/jquery.form.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/editor.md/lib/highlight/highlight.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/js/array.js" "version"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/js/editor.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/js/quill.js"}}" type="text/javascript"></script>
+<script src="{{static "/editor.md/lib/highlight/highlight.js"}}" type="text/javascript"></script>
+<script src="{{static "/js/array.js" "version"}}" type="text/javascript"></script>
+<script src="{{static "/js/editor.js"}}" type="text/javascript"></script>
+<script src="{{static "/js/quill.js"}}" type="text/javascript"></script>
 <script type="text/javascript">
     $(function () {
         hljs.configure({   // optionally configure hljs

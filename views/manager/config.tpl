@@ -10,7 +10,7 @@
     <!-- Bootstrap -->
     <link href="{{cdncss "/twitter-bootstrap/3.3.7/css/bootstrap.min.css"}}" rel="stylesheet">
     <link href="{{cdncss "/font-awesome/4.7.0/css/font-awesome.min.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/editor.md/css/editormd.css"}}" rel="stylesheet">
+    <link href="{{static "/editor.md/css/editormd.css"}}" rel="stylesheet">
     <link href="{{static "/css/main.css" "version"}}" rel="stylesheet">
 </head>
 <body>
@@ -50,7 +50,7 @@
 <script src="{{cdnjs "/jquery/1.12.4/jquery.min.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/twitter-bootstrap/3.3.7/js/bootstrap.min.js"}}" type="text/javascript"></script>
 <script src="{{static "/js/jquery.form.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/editor.md/editormd.js" "version"}}" type="text/javascript"></script>
+<script src="{{static "/editor.md/editormd.js" "version"}}" type="text/javascript"></script>
 <script src="{{static "/js/main.js"}}" type="text/javascript"></script>
 <script type="text/javascript">
     $(function() {
@@ -63,7 +63,7 @@
             searchReplace    : true,
             placeholder      : "",
             mode             : "text/x-properties",
-            path             : "{{cdnjs "/editor.md/lib/"}}"
+            path             : "{{static "/editor.md/lib/"}}"
         });
 
         $("#configFileContainerForm").ajaxForm({

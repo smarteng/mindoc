@@ -27,13 +27,13 @@
     <link href="{{cdncss "/twitter-bootstrap/3.3.7/css/bootstrap.min.css"}}" rel="stylesheet">
     <link href="{{cdncss "/font-awesome/4.7.0/css/font-awesome.min.css"}}" rel="stylesheet">
     <link href="{{cdncss "/jstree/3.3.4/themes/default/style.min.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/wangEditor/css/wangEditor.min.css"}}" rel="stylesheet">
+    <link href="{{static "/wangEditor/css/wangEditor.min.css"}}" rel="stylesheet">
 
-    <link href="{{cdncss (print "/editor.md/lib/highlight/styles/" .HighlightStyle ".css") "version"}}" rel="stylesheet">
-    <link href="{{cdncss "/webuploader/webuploader.css"}}" rel="stylesheet">
+    <link href="{{static (print "/editor.md/lib/highlight/styles/" .HighlightStyle ".css") "version"}}" rel="stylesheet">
+    <link href="{{static "/webuploader/webuploader.css"}}" rel="stylesheet">
 
-    <link href="{{cdncss "/css/jstree.css"}}" rel="stylesheet">
-    <link href="{{cdncss "/css/markdown.css"}}" rel="stylesheet">
+    <link href="{{static "/css/jstree.css"}}" rel="stylesheet">
+    <link href="{{static "/css/markdown.css"}}" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -196,7 +196,7 @@
 <script src="{{cdnjs "/layer/3.0.3/layer.js"}}" type="text/javascript" ></script>
 <script src="{{cdnjs "/to-markdown/dist/to-markdown.js"}}" type="text/javascript"></script>
 <script src="{{static "/js/jquery.form.js"}}" type="text/javascript"></script>
-<script src="{{cdnjs "/js/editor.js"}}" type="text/javascript"></script>
+<script src="{{static "/js/editor.js"}}" type="text/javascript"></script>
 <script src="{{cdnjs "/js/html-editor.js"}}" type="text/javascript"></script>
 <script type="text/javascript">
     $(function () {
