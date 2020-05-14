@@ -350,7 +350,6 @@ func (c *AccountController) FindPassword() {
 		c.Data["Email"] = memberToken.Email
 		c.Data["Token"] = memberToken.Token
 		c.TplName = "account/find_password_setp2.tpl"
-
 	}
 }
 
