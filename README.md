@@ -26,7 +26,8 @@ MinDoc 的前身是 SmartWiki 文档系统。SmartWiki 是基于 PHP 框架 lara
 git clone https://github.com/smarteng/mindoc.git
 go mod download
 // 记录编译的时间
-go build -ldflags "-w" -ldflags "-X 'github.com/smarteng/mindoc/conf.BUILD_TIME=$(date '+%Y-%m-%d %H:%M:%S')'"
+bash build.sh
+#go build -ldflags "-w" -ldflags "-X 'github.com/smarteng/mindoc/conf.BUILD_TIME=$(date '+%Y-%m-%d %H:%M:%S')'"
 ./mindoc install
 ./mindoc
 ```
