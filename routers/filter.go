@@ -14,19 +14,19 @@ import (
 func init() {
 	var FilterUser = func(ctx *context.Context) {
 		_, ok := ctx.Input.Session(conf.LoginSessionName).(models.Member)
-
 		if !ok {
 			if ctx.Input.IsAjax() {
 				jsonData := make(map[string]interface{}, 3)
-
 				jsonData["errcode"] = 403
 				jsonData["message"] = "请登录后再操作"
 
 				returnJSON, _ := json.Marshal(jsonData)
-
-				ctx.ResponseWriter.Write(returnJSON)
+				if _, err := ctx.ResponseWriter.Write(returnJSON); err != nil {
+					panic("500")
+				}
 			} else {
-				ctx.Redirect(302, conf.URLFor("AccountController.Login")+"?url="+url.PathEscape(conf.BaseUrl+ctx.Request.URL.RequestURI()))
+				refer := url.PathEscape(conf.BaseUrl + ctx.Request.URL.RequestURI())
+				ctx.Redirect(302, conf.URLFor("AccountController.Login")+"?url="+refer)
 			}
 		}
 	}
@@ -46,10 +46,10 @@ func init() {
 	}
 
 	var StartRouter = func(ctx *context.Context) {
-		sessionId := ctx.Input.Cookie(beego.AppConfig.String("sessionname"))
-		if sessionId != "" {
+		sessionID := ctx.Input.Cookie(beego.AppConfig.String("sessionname"))
+		if sessionID != "" {
 			//sessionId必须是数字字母组成，且最小32个字符，最大1024字符
-			if ok, err := regexp.MatchString(`^[a-zA-Z0-9]{32,512}$`, sessionId); !ok || err != nil {
+			if ok, err := regexp.MatchString(`^[a-zA-Z0-9]{32,512}$`, sessionID); !ok || err != nil {
 				panic("401")
 			}
 		}
