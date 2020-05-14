@@ -4,19 +4,21 @@ import (
 	"bytes"
 
 	"encoding/json"
+	"html/template"
 	"io"
+	"io/ioutil"
+	"path/filepath"
 	"strings"
 	"time"
 
-	"html/template"
-	"io/ioutil"
-	"path/filepath"
-
 	"github.com/astaxie/beego"
+	"github.com/go-playground/validator/v10"
 	"github.com/smarteng/mindoc/conf"
 	"github.com/smarteng/mindoc/models"
 	"github.com/smarteng/mindoc/utils"
 )
+
+var validate *validator.Validate
 
 type BaseController struct {
 	beego.Controller

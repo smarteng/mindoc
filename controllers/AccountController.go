@@ -1,12 +1,11 @@
 package controllers
 
 import (
+	"html/template"
 	"net/url"
 	"regexp"
 	"strings"
 	"time"
-
-	"html/template"
 
 	"github.com/astaxie/beego"
 	"github.com/lifei6671/gocaptcha"
@@ -178,7 +177,7 @@ func (c *AccountController) Register() {
 		if password1 != password2 {
 			c.JsonResult(6003, "确认密码不正确")
 		}
-		if ok, err := regexp.MatchString(conf.RegexpEmail, email); !ok || err != nil || email == "" {
+		if err := validate.Var(email, "required,email"); err != nil {
 			c.JsonResult(6004, "邮箱格式不正确")
 		}
 		// 如果开启了验证码

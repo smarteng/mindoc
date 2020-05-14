@@ -2,12 +2,11 @@
 package conf
 
 import (
-	"strings"
-
 	"fmt"
 	"os"
 	"path/filepath"
 	"strconv"
+	"strings"
 
 	"github.com/astaxie/beego"
 )
@@ -16,8 +15,6 @@ import (
 const LoginSessionName = "LoginSessionName"
 
 const CaptchaSessionName = "__captcha__"
-
-const RegexpEmail = "^[a-zA-Z0-9.!#$%&'*+\\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
 
 //允许用户名中出现点号
 const RegexpAccount = `^[a-zA-Z][a-zA-Z0-9\.-]{2,50}$`

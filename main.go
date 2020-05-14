@@ -15,7 +15,6 @@ import (
 	_ "github.com/smarteng/mindoc/routers"
 )
 
-
 func main() {
 	fmt.Println(os.Args)
 	if len(os.Args) >= 3 && os.Args[1] == "service" {

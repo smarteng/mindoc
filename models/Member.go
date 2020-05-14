@@ -8,6 +8,7 @@ import (
 	"errors"
 	"fmt"
 	"io/ioutil"
+	"math"
 	"net/http"
 	"net/url"
 	"regexp"
@@ -15,13 +16,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/go-ldap/ldap/v3"
-
-	"math"
-
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
 	"github.com/astaxie/beego/orm"
+	"github.com/go-ldap/ldap/v3"
 	"github.com/smarteng/mindoc/conf"
 	"github.com/smarteng/mindoc/utils"
 )
@@ -245,10 +243,7 @@ func (m *Member) Add() error {
 	if ok, err := regexp.MatchString(conf.RegexpAccount, m.Account); m.Account == "" || !ok || err != nil {
 		return errors.New("账号只能由英文字母数字组成，且在3-50个字符")
 	}
-	if m.Email == "" {
-		return errors.New("邮箱不能为空")
-	}
-	if ok, err := regexp.MatchString(conf.RegexpEmail, m.Email); !ok || err != nil || m.Email == "" {
+	if err := validate.Var(m.Email, "required,email"); err != nil {
 		return errors.New("邮箱格式不正确")
 	}
 	if m.AuthMethod == "local" {
@@ -405,7 +400,7 @@ func (m *Member) Valid(is_hash_password bool) error {
 		m.Status = 0
 	}
 	//邮箱格式校验
-	if ok, err := regexp.MatchString(conf.RegexpEmail, m.Email); !ok || err != nil || m.Email == "" {
+	if err := validate.Var(m.Email, "required,email"); err != nil {
 		return ErrMemberEmailFormatError
 	}
 	//如果是未加密密码，需要校验密码格式

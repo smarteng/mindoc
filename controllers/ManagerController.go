@@ -3,15 +3,13 @@ package controllers
 import (
 	"encoding/json"
 	"html/template"
-	"regexp"
-	"strings"
-
-	"math"
-	"path/filepath"
-	"strconv"
-
 	"io/ioutil"
+	"math"
 	"os"
+	"path/filepath"
+	"regexp"
+	"strconv"
+	"strings"
 
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
@@ -97,7 +95,7 @@ func (c *ManagerController) CreateMember() {
 	if password1 != password2 {
 		c.JsonResult(6003, "确认密码不正确")
 	}
-	if ok, err := regexp.MatchString(conf.RegexpEmail, email); !ok || err != nil || email == "" {
+	if err := validate.Var(email, "required,email"); err != nil {
 		c.JsonResult(6004, "邮箱格式不正确")
 	}
 	if role != 0 && role != 1 && role != 2 {
