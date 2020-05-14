@@ -41,7 +41,7 @@ func init() {
 
 	var FinishRouter = func(ctx *context.Context) {
 		ctx.ResponseWriter.Header().Add("MinDoc-Version", conf.VERSION)
-		ctx.ResponseWriter.Header().Add("MinDoc-Site", "https://www.iminho.me")
+		ctx.ResponseWriter.Header().Add("MinDoc-BuildTime", conf.BUILD_TIME)
 		ctx.ResponseWriter.Header().Add("X-XSS-Protection", "1; mode=block")
 	}
 
