@@ -84,9 +84,7 @@ func ModifyPassword() {
 
 //初始化数据
 func initialization() {
-
 	err := models.NewOption().Init()
-
 	if err != nil {
 		panic(err.Error())
 	}

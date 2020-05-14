@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"runtime"
 	"strconv"
 	"strings"
 
@@ -76,6 +77,11 @@ var (
 	AutoLoadDelay     = 0
 )
 
+func init() {
+	VERSION = beego.AppConfig.String("version")
+	GO_VERSION = runtime.Version()
+}
+
 // app_key
 func GetAppKey() string {
 	return beego.AppConfig.DefaultString("app_key", "mindoc")
@@ -103,11 +109,8 @@ func GetDefaultCover() string {
 //获取允许的商城文件的类型.
 func GetUploadFileExt() []string {
 	ext := beego.AppConfig.DefaultString("upload_file_ext", "png|jpg|jpeg|gif|txt|doc|docx|pdf")
-
 	temp := strings.Split(ext, "|")
-
 	exts := make([]string, len(temp))
-
 	i := 0
 	for _, item := range temp {
 		if item != "" {
@@ -187,12 +190,10 @@ func GetExportOutputPath() string {
 
 //判断是否是允许商城的文件类型.
 func IsAllowUploadFileExt(ext string) bool {
-
 	if strings.HasPrefix(ext, ".") {
 		ext = string(ext[1:])
 	}
 	exts := GetUploadFileExt()
-
 	for _, item := range exts {
 		if item == "*" {
 			return true

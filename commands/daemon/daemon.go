@@ -52,8 +52,8 @@ func (d *Daemon) Run() {
 	if err != nil {
 		f = os.Args[0]
 	}
-
-	fmt.Printf("MinDoc version => %s\nbuild time => %s\nstart directory => %s\n%s\n", conf.VERSION, conf.BUILD_TIME, f, conf.GO_VERSION)
+	msg := "MinDoc version:%s\nbuild time:%s\nstart directory:%s\ngo version:%s\n"
+	fmt.Printf(msg, conf.VERSION, conf.BUILD_TIME, f, conf.GO_VERSION)
 	beego.Run()
 }
 

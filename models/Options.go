@@ -96,9 +96,7 @@ func (p *Option) All() ([]*Option, error) {
 }
 
 func (m *Option) Init() error {
-
 	o := orm.NewOrm()
-
 	if !o.QueryTable(m.TableNameWithPrefix()).Filter("option_name", "ENABLED_REGISTER").Exist() {
 		option := NewOption()
 		option.OptionValue = "false"

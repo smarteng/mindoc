@@ -16,7 +16,7 @@ import (
 )
 
 func main() {
-	fmt.Println(os.Args)
+	// daemon命令入口
 	if len(os.Args) >= 3 && os.Args[1] == "service" {
 		switch os.Args[2] {
 		case commands.CmdInstall:
@@ -27,16 +27,15 @@ func main() {
 			daemon.Restart()
 		}
 	}
-
+	// 安装和更新命令入口
 	commands.RegisterCommand()
+	// 起一个服务监听
 	d := daemon.NewDaemon()
 	s, err := service.New(d, d.Config())
-
 	if err != nil {
 		fmt.Println("Create service error => ", err)
 		os.Exit(1)
 	}
-
 	if err := s.Run(); err != nil {
 		log.Fatal("启动程序失败 ->", err)
 	}

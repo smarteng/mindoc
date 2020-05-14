@@ -122,7 +122,6 @@ func RegisterModel() {
 
 // RegisterLogger 注册日志
 func RegisterLogger(log string) {
-
 	logs.SetLogFuncCall(true)
 	_ = logs.SetLogger("console")
 	logs.EnableFuncCallDepth(true)
@@ -140,11 +139,9 @@ func RegisterLogger(log string) {
 	}
 
 	logPath := filepath.Join(log, "log.log")
-
 	if _, err := os.Stat(log); os.IsNotExist(err) {
 		_ = os.MkdirAll(log, 0755)
 	}
-
 	config := make(map[string]interface{}, 1)
 	config["filename"] = logPath
 	config["perm"] = "0755"
@@ -189,7 +186,6 @@ func RegisterLogger(log string) {
 	} else {
 		_ = beego.SetLogger(logs.AdapterFile, string(b))
 	}
-
 	beego.SetLogFuncCall(true)
 }
 
@@ -317,18 +313,14 @@ func ResolveCommand(args []string) {
 			conf.LogFile = conf.WorkingDir("runtime", "logs")
 		}
 	}
-
 	conf.AutoLoadDelay = beego.AppConfig.DefaultInt("config_auto_delay", 0)
 	uploads := conf.WorkingDir("uploads")
-
 	_ = os.MkdirAll(uploads, 0666)
-
 	beego.BConfig.WebConfig.StaticDir["/static"] = filepath.Join(conf.WorkingDirectory, "static")
 	beego.BConfig.WebConfig.StaticDir["/uploads"] = uploads
 	beego.BConfig.WebConfig.ViewsPath = conf.WorkingDir("views")
 
 	fonts := conf.WorkingDir("static", "fonts")
-
 	if !filetil.FileExists(fonts) {
 		log.Fatal("Font path not exist.")
 	}
@@ -506,7 +498,6 @@ func RegisterError() {
 }
 
 func init() {
-
 	if configPath, err := filepath.Abs(conf.ConfigurationFile); err == nil {
 		conf.ConfigurationFile = configPath
 	}
