@@ -13,7 +13,6 @@
 
     <!-- Bootstrap -->
     <link href="{{cdncss "/twitter-bootstrap/3.3.7/css/bootstrap.min.css"}}" rel="stylesheet">
-
     <link href="{{cdncss "/font-awesome/4.7.0/css/font-awesome.min.css"}}" rel="stylesheet">
     <link href="{{static "/editor.md/lib/mermaid/mermaid.css"}}" rel="stylesheet">
     <link href="{{static "/editor.md/lib/sequence/sequence-diagram-min.css"}}" rel="stylesheet">
